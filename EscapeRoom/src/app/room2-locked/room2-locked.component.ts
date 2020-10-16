@@ -3,12 +3,11 @@ import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
-  selector: 'app-room2',
-  templateUrl: './room2.component.html',
-  styleUrls: ['./room2.component.css']
+  selector: 'app-room2-locked',
+  templateUrl: './room2-locked.component.html',
+  styleUrls: ['./room2-locked.component.css']
 })
-export class Room2Component implements OnInit {
-
+export class Room2LockedComponent implements OnInit {
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
   ngOnInit(): void {
@@ -20,10 +19,10 @@ export class Room2Component implements OnInit {
       // console.log('Left Button Clicked (Room 2)');
       this.router.navigateByUrl('/room1');
     }
-    if (event.clientX > 770){
+    if (event.clientY > 400){
       // console.log('Right Button Clicked (Room 2)');
-      this.router.navigateByUrl('/room3');
+      this.lockedRoomsService.roomLocked[2] = false;
+      this.router.navigateByUrl('/room2');
     }
   }
-
 }
