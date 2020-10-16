@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import {Router} from '@angular/router';
+import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
   selector: 'app-room1',
@@ -8,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class Room1Component implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
   ngOnInit(): void {
   }
@@ -17,8 +18,13 @@ export class Room1Component implements OnInit {
   @HostListener('click', ['$event']) onClick(event) {
     if (event.clientX > 770){
       // console.log('Right Button Clicked (Room 1)');
-      this.router.navigateByUrl('/room2');
+      if (this.lockedRoomsService.roomLocked[2]){
+        this.router.navigateByUrl('/room2locked');
+      } else {
+        this.router.navigateByUrl('/room2');
+      }
     }
   }
-
 }
+
+

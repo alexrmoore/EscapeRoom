@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {  }
 
   ngOnInit(): void {
   }
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     if (event.clientX > 260 && event.clientX < 570){
       if (event.clientY > 230 && event.clientY < 385){
         // console.log('Start Button Clicked (Start)');
+        this.lockedRoomsService.roomLocked = [false, false, true];
         this.router.navigateByUrl('/room1');
       }
     }
