@@ -10,7 +10,6 @@ import { LockedRoomsService } from '../locked-rooms.service';
 })
 export class Room2LockedComponent implements OnInit {
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
-
   values = '';
 
   // tslint:disable-next-line:typedef

@@ -8,7 +8,7 @@
     top: 0;
     width: 800px;
     height: 500px;
-    background-image: url(../left_deadend.png);
+    background: black;
     border: 0px groove yellow;
 }
 
@@ -16,21 +16,22 @@
     position: absolute;
     cursor: pointer;
     z-index: 2;
-    background: blue;
-    border: 0px solid blue;
 }
 
-.click-zone.b {
-    left: 770px;
-    top: 0px;
-    width: 30px;
-    height: 500px;
+.click-zone.reset {
+    background: red;
+    border: 0px solid black;
+    left: 275px;
+    top: 245px;
+    width: 280px;
+    height: 60px;
+    font-size: 50px;
 }
 
 .testtextbox {
     position: absolute;
-    left: 350px;
-    top: 150px;
+    left: 210px;
+    top: 100px;
     z-index: 3;
-    font-size: xx-large;
+    font-size: 60px;
 }

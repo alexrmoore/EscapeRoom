@@ -8,7 +8,7 @@
     top: 0;
     width: 800px;
     height: 500px;
-    background-image: url(../horizontalcorridor.png);
+    background-image: url(../endroom.png);
     border: 0px groove yellow;
 }
 
@@ -27,11 +27,13 @@
     height: 500px;
 }
 
-.click-zone.b {
-    left: 770px;
-    top: 0px;
-    width: 30px;
-    height: 500px;
+.click-zone.end {
+    background: none;
+    border: 0px solid red;
+    left: 650px;
+    top: 150px;
+    width: 140px;
+    height: 200px;
 }
 
 .testtextbox {

@@ -8,7 +8,7 @@
     top: 0;
     width: 800px;
     height: 500px;
-    background-image: url(../room3cropped.png);
+    background-image: url(../horizontalcorridor.png);
     border: 0px groove yellow;
 }
 
@@ -25,4 +25,19 @@
     top: 0px;
     width: 30px;
     height: 500px;
+}
+
+.click-zone.b {
+    left: 770px;
+    top: 0px;
+    width: 30px;
+    height: 500px;
+}
+
+.testtextbox {
+    position: absolute;
+    left: 350px;
+    top: 150px;
+    z-index: 3;
+    font-size: xx-large;
 }

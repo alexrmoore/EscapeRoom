@@ -2,11 +2,11 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-room3',
-  templateUrl: './room3.component.html',
-  styleUrls: ['./room3.component.css']
+  selector: 'app-room4',
+  templateUrl: './room4.component.html',
+  styleUrls: ['./room4.component.css']
 })
-export class Room3Component implements OnInit {
+export class Room4Component implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -14,15 +14,16 @@ export class Room3Component implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
+  public onEndClick(){
+    this.router.navigateByUrl('/endscreen');
+  }
+
+
+  // tslint:disable-next-line:typedef
   @HostListener('click', ['$event']) onClick(event) {
     if (event.clientX < 40){
       // console.log('Left Button Clicked (Room 3)');
-      this.router.navigateByUrl('/room2');
-    }
-    if (event.clientX > 770){
-      // console.log('Right Button Clicked (Room 2)');
-      this.router.navigateByUrl('/room4');
+      this.router.navigateByUrl('/room3');
     }
   }
-
 }

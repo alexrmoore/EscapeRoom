@@ -8,7 +8,6 @@ import { LockedRoomsService } from '../locked-rooms.service';
   styleUrls: ['./room1.component.css']
 })
 export class Room1Component implements OnInit {
-
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
   ngOnInit(): void {
