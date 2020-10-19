@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     if (event.clientX > 260 && event.clientX < 570){
       if (event.clientY > 230 && event.clientY < 385){
         // console.log('Start Button Clicked (Start)');
-        this.lockedRoomsService.roomLocked = [false, false, true];
+        this.lockedRoomsService.roomLocked = [false, false, true, true];
         this.router.navigateByUrl('/room1');
       }
     }
