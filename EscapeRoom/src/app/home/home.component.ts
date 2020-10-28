@@ -14,6 +14,11 @@ export class HomeComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
+  public PhysicsPathStart(){
+    this.router.navigateByUrl('/reflection_room1');
+  }
+
+  // tslint:disable-next-line:typedef
   @HostListener('click', ['$event']) onClick(event) {
     // console.log(event.clientX);
     // console.log(event.clientY);
