@@ -24,3 +24,10 @@
     width: 310px;
     height: 152px;
 }
+
+.click-zone.test {
+    left: 0px;
+    top: 450px;
+    width: 800px;
+    height: 50px;
+}

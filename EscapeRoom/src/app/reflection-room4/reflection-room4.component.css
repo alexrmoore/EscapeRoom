@@ -1,3 +1,4 @@
+
 .container {
     position: relative;
 }
@@ -8,7 +9,7 @@
     top: 0;
     width: 800px;
     height: 500px;
-    background-image: url(../leftdeadend.png);
+    background-image: url(../downdeadend.png);
     border: 0px groove yellow;
 }
 
@@ -16,15 +17,15 @@
     position: absolute;
     cursor: pointer;
     z-index: 2;
-    background: blue;
+    background: red;
     border: 0px solid blue;
 }
 
-.click-zone.b {
-    left: 770px;
+.click-zone.up {
+    left: 340px;
     top: 0px;
-    width: 30px;
-    height: 500px;
+    width: 120px;
+    height: 30px;
 }
 
 .testtextbox {
@@ -34,3 +35,4 @@
     z-index: 3;
     font-size: xx-large;
 }
+

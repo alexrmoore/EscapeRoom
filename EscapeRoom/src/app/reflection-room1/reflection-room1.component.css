@@ -16,15 +16,15 @@
     position: absolute;
     cursor: pointer;
     z-index: 2;
-    background: blue;
+    background: red;
     border: 0px solid blue;
 }
 
-.click-zone.b {
+.click-zone.right {
     left: 770px;
-    top: 0px;
+    top: 190px;
     width: 30px;
-    height: 500px;
+    height: 120px;
 }
 
 .testtextbox {
