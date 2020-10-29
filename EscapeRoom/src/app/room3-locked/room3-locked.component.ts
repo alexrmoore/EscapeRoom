@@ -27,7 +27,7 @@ export class Room3LockedComponent implements OnInit {
     }
     if (slider3value === '100'){
       if (checkbox1.checked && checkbox2.checked && checkbox3.checked){
-        this.lockedRoomsService.roomLocked[3] = false;
+        this.lockedRoomsService.roomLockedTestPath[3] = false;
         this.router.navigateByUrl('/room3');
       }
     }

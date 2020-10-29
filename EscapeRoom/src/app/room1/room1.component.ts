@@ -17,7 +17,7 @@ export class Room1Component implements OnInit {
   @HostListener('click', ['$event']) onClick(event) {
     if (event.clientX > 770){
       // console.log('Right Button Clicked (Room 1)');
-      if (this.lockedRoomsService.roomLocked[2]){
+      if (this.lockedRoomsService.roomLockedTestPath[2]){
         this.router.navigateByUrl('/room2locked');
       } else {
         this.router.navigateByUrl('/room2');

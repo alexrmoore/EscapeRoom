@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   // tslint:disable-next-line:typedef
   public PhysicsPathStart(){
     this.router.navigateByUrl('/reflection_room1');
+    this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, true, false, false, false, true];
   }
 
   // tslint:disable-next-line:typedef
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
     if (event.clientX > 260 && event.clientX < 570){
       if (event.clientY > 230 && event.clientY < 385){
         // console.log('Start Button Clicked (Start)');
-        this.lockedRoomsService.roomLocked = [false, false, true, true];
+        this.lockedRoomsService.roomLockedTestPath = [false, false, true, true];
         this.router.navigateByUrl('/room1');
       }
     }

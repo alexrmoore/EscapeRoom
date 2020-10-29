@@ -17,7 +17,7 @@ export class Room2LockedComponent implements OnInit {
     this.values = '';
     this.values += event.target.value;
     if (this.values === 'password'){
-      this.lockedRoomsService.roomLocked[2] = false;
+      this.lockedRoomsService.roomLockedTestPath[2] = false;
       this.router.navigateByUrl('/room2');
     }
   }

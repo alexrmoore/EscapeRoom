@@ -22,7 +22,7 @@ export class Room2Component implements OnInit {
     }
     if (event.clientX > 770){
       // console.log('Right Button Clicked (Room 2)');
-      if (this.lockedRoomsService.roomLocked[3]){
+      if (this.lockedRoomsService.roomLockedTestPath[3]){
         this.router.navigateByUrl('/room3locked');
       } else {
         this.router.navigateByUrl('/room3');
