@@ -16,7 +16,12 @@ export class ReflectionRoom4Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onUpClick(){
-    this.router.navigateByUrl('/reflection_room2');
+    if (this.lockedRoomsService.roomLocked[4]){
+      this.router.navigateByUrl('/reflection_room2_locked');
+    }
+    else {
+      this.router.navigateByUrl('/reflection_room2');
+    }
   }
 
 }
