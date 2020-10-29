@@ -26,7 +26,12 @@ export class InterferenceRoom1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onDownClick(){
-    this.router.navigateByUrl('/interference_room3');
+    if (this.lockedRoomsService.roomLocked[8]){
+      this.router.navigateByUrl('/interference_room3_locked');
+    }
+    else {
+      this.router.navigateByUrl('/interference_room3');
+    }
   }
 
 }

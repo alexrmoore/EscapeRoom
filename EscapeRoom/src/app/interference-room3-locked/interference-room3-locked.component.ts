@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
+import {Router} from '@angular/router';
+import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
   selector: 'app-interference-room3-locked',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterferenceRoom3LockedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {}
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  public onUpClick(){
+    this.router.navigateByUrl('/interference_room1');
+  }
+
+  // tslint:disable-next-line:typedef
+  public onDownClick(){
+    this.router.navigateByUrl('/interference_room4');
+  }
+
+  // tslint:disable-next-line:typedef
+  @HostListener('click', ['$event']) onClick(event) {
+    this.lockedRoomsService.roomLocked[8] = false;
+    this.router.navigateByUrl('/interference_room3');
+  }
 }

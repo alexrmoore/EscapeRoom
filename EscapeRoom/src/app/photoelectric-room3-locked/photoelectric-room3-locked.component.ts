@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
+import {Router} from '@angular/router';
+import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
   selector: 'app-photoelectric-room3-locked',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoelectricRoom3LockedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {}
 
   ngOnInit(): void {
+  }
+
+  // tslint:disable-next-line:typedef
+  public onLeftClick(){
+    this.router.navigateByUrl('/photoelectric_room1');
+  }
+
+  // tslint:disable-next-line:typedef
+  public onUpClick(){
+    this.router.navigateByUrl('/photoelectric_room4');
+  }
+
+  // tslint:disable-next-line:typedef
+  @HostListener('click', ['$event']) onClick(event) {
+    this.lockedRoomsService.roomLocked[12] = false;
+    this.router.navigateByUrl('/photoelectric_room3');
   }
 
 }
