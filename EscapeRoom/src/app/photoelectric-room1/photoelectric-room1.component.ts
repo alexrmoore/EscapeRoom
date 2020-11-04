@@ -16,7 +16,7 @@ export class PhotoelectricRoom1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onRightClick(){
-    if (this.lockedRoomsService.roomLocked[12]){
+    if (this.lockedRoomsService.roomLocked[13]){
       this.router.navigateByUrl('/photoelectric_room3_locked');
     }
     else {

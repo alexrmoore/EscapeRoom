@@ -8,7 +8,7 @@
     top: 0;
     width: 800px;
     height: 500px;
-    background-image: url(../Lturn_downleft.png);
+    background-image: url(../horizontalcorridor_locked.png);
     border: 0px groove yellow;
 }
 
@@ -25,13 +25,6 @@
     top: 190px;
     width: 30px;
     height: 120px;
-}
-
-.click-zone.up {
-    left: 340px;
-    top: 0px;
-    width: 120px;
-    height: 30px;
 }
 
 .testtextbox {

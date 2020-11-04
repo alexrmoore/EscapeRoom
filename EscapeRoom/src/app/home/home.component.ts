@@ -16,20 +16,14 @@ export class HomeComponent implements OnInit {
   // tslint:disable-next-line:typedef
   public PhysicsPathStart(){
     this.router.navigateByUrl('/reflection_room1');
-    this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, true, false, false, false, true];
+    // tslint:disable-next-line:max-line-length
+    this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, false, true, false, false, false, true, true];
   }
 
   // tslint:disable-next-line:typedef
-  @HostListener('click', ['$event']) onClick(event) {
-    // console.log(event.clientX);
-    // console.log(event.clientY);
-    if (event.clientX > 260 && event.clientX < 570){
-      if (event.clientY > 230 && event.clientY < 385){
-        // console.log('Start Button Clicked (Start)');
-        this.lockedRoomsService.roomLockedTestPath = [false, false, true, true];
-        this.router.navigateByUrl('/room1');
-      }
-    }
+  public OldPathStart(){
+    this.lockedRoomsService.roomLockedTestPath = [false, false, true, true];
+    this.router.navigateByUrl('/room1');
   }
-
 }
+

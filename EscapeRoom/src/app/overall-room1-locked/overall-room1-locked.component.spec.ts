@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FinalRoomComponent } from './final-room.component';
+import { OverallRoom1LockedComponent } from './overall-room1-locked.component';
 
-describe('FinalRoomComponent', () => {
-  let component: FinalRoomComponent;
-  let fixture: ComponentFixture<FinalRoomComponent>;
+describe('OverallRoom1LockedComponent', () => {
+  let component: OverallRoom1LockedComponent;
+  let fixture: ComponentFixture<OverallRoom1LockedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FinalRoomComponent ]
+      declarations: [ OverallRoom1LockedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FinalRoomComponent);
+    fixture = TestBed.createComponent(OverallRoom1LockedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

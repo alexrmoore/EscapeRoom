@@ -3,11 +3,11 @@ import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
-  selector: 'app-interference-room2',
-  templateUrl: './interference-room2.component.html',
-  styleUrls: ['./interference-room2.component.css']
+  selector: 'app-complete-room',
+  templateUrl: './complete-room.component.html',
+  styleUrls: ['./complete-room.component.css']
 })
-export class InterferenceRoom2Component implements OnInit {
+export class CompleteRoomComponent implements OnInit {
 
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {}
 
@@ -16,12 +16,12 @@ export class InterferenceRoom2Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onLeftClick(){
-    this.router.navigateByUrl('/interference_room1');
+    this.router.navigateByUrl('/overall_room1');
   }
 
   // tslint:disable-next-line:typedef
-  public onUpClick(){
-    this.router.navigateByUrl('/interference_room5');
+  public onEndClick(){
+    this.router.navigateByUrl('/endscreen');
   }
 
 }

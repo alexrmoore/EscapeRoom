@@ -21,14 +21,18 @@ import { ReflectionRoom4Component } from './reflection-room4/reflection-room4.co
 import { InterferenceRoom1Component } from './interference-room1/interference-room1.component';
 import { InterferenceRoom2Component } from './interference-room2/interference-room2.component';
 import { InterferenceRoom4Component } from './interference-room4/interference-room4.component';
+import { InterferenceRoom5Component } from './interference-room5/interference-room5.component';
 import { InterferenceRoom3Component } from './interference-room3/interference-room3.component';
 import { InterferenceRoom3LockedComponent } from './interference-room3-locked/interference-room3-locked.component';
-import { FinalRoomComponent } from './final-room/final-room.component';
 import { PhotoelectricRoom1Component } from './photoelectric-room1/photoelectric-room1.component';
 import { PhotoelectricRoom2Component } from './photoelectric-room2/photoelectric-room2.component';
 import { PhotoelectricRoom3Component } from './photoelectric-room3/photoelectric-room3.component';
 import { PhotoelectricRoom3LockedComponent } from './photoelectric-room3-locked/photoelectric-room3-locked.component';
 import { PhotoelectricRoom4Component } from './photoelectric-room4/photoelectric-room4.component';
+import { OverallRoom1Component } from './overall-room1/overall-room1.component';
+import { OverallRoom1LockedComponent } from './overall-room1-locked/overall-room1-locked.component';
+import { CompleteRoomComponent } from './complete-room/complete-room.component';
+
 
 
 
@@ -53,12 +57,18 @@ const routes: Routes = [
   { path: 'interference_room3', component: InterferenceRoom3Component},
   { path: 'interference_room3_locked', component: InterferenceRoom3LockedComponent},
   { path: 'interference_room4', component: InterferenceRoom4Component},
+  { path: 'interference_room5', component: InterferenceRoom5Component},
 
   { path: 'photoelectric_room1', component: PhotoelectricRoom1Component},
   { path: 'photoelectric_room2', component: PhotoelectricRoom2Component},
   { path: 'photoelectric_room3', component: PhotoelectricRoom3Component},
   { path: 'photoelectric_room3_locked', component: PhotoelectricRoom3LockedComponent},
-  { path: 'photoelectric_room4', component: PhotoelectricRoom4Component}
+  { path: 'photoelectric_room4', component: PhotoelectricRoom4Component},
+
+  { path: 'overall_room1', component: OverallRoom1Component},
+  { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
+
+  { path: 'complete_room', component: CompleteRoomComponent}
 ];
 
 @NgModule({
@@ -82,12 +92,15 @@ const routes: Routes = [
     InterferenceRoom4Component,
     InterferenceRoom3Component,
     InterferenceRoom3LockedComponent,
-    FinalRoomComponent,
     PhotoelectricRoom1Component,
     PhotoelectricRoom2Component,
     PhotoelectricRoom3Component,
     PhotoelectricRoom3LockedComponent,
-    PhotoelectricRoom4Component
+    PhotoelectricRoom4Component,
+    InterferenceRoom5Component,
+    OverallRoom1Component,
+    OverallRoom1LockedComponent,
+    CompleteRoomComponent
   ],
   imports: [
     BrowserModule,
