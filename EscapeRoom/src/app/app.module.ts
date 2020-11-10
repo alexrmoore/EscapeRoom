@@ -32,6 +32,12 @@ import { PhotoelectricRoom4Component } from './photoelectric-room4/photoelectric
 import { OverallRoom1Component } from './overall-room1/overall-room1.component';
 import { OverallRoom1LockedComponent } from './overall-room1-locked/overall-room1-locked.component';
 import { CompleteRoomComponent } from './complete-room/complete-room.component';
+import { ReflectionRoom1Info1Component } from './reflection-room1-info1/reflection-room1-info1.component';
+import { ReflectionRoom2Info1Component } from './reflection-room2-info1/reflection-room2-info1.component';
+import { ReflectionRoom3Info1Component } from './reflection-room3-info1/reflection-room3-info1.component';
+import { ReflectionRoom4Info1Component } from './reflection-room4-info1/reflection-room4-info1.component';
+import { ReflectionRoom3Puzzle1Component } from './reflection-room3-puzzle1/reflection-room3-puzzle1.component';
+import { ReflectionRoom4Puzzle1Component } from './reflection-room4-puzzle1/reflection-room4-puzzle1.component';
 
 
 
@@ -51,6 +57,13 @@ const routes: Routes = [
   { path: 'reflection_room2_locked', component: ReflectionRoom2LockedComponent },
   { path: 'reflection_room3', component: ReflectionRoom3Component },
   { path: 'reflection_room4', component: ReflectionRoom4Component },
+
+  { path: 'reflection_room1_info1', component: ReflectionRoom1Info1Component },
+  { path: 'reflection_room2_info1', component: ReflectionRoom2Info1Component },
+  { path: 'reflection_room3_info1', component: ReflectionRoom3Info1Component },
+  { path: 'reflection_room4_info1', component: ReflectionRoom4Info1Component },
+  { path: 'reflection_room3_puzzle1', component: ReflectionRoom3Puzzle1Component },
+  { path: 'reflection_room4_puzzle1', component: ReflectionRoom4Puzzle1Component },
 
   { path: 'interference_room1', component: InterferenceRoom1Component},
   { path: 'interference_room2', component: InterferenceRoom2Component},
@@ -100,7 +113,13 @@ const routes: Routes = [
     InterferenceRoom5Component,
     OverallRoom1Component,
     OverallRoom1LockedComponent,
-    CompleteRoomComponent
+    CompleteRoomComponent,
+    ReflectionRoom1Info1Component,
+    ReflectionRoom2Info1Component,
+    ReflectionRoom3Info1Component,
+    ReflectionRoom4Info1Component,
+    ReflectionRoom3Puzzle1Component,
+    ReflectionRoom4Puzzle1Component
   ],
   imports: [
     BrowserModule,

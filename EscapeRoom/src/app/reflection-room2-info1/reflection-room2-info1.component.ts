@@ -3,18 +3,19 @@ import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 
 @Component({
-  selector: 'app-reflection-room1',
-  templateUrl: './reflection-room1.component.html',
-  styleUrls: ['./reflection-room1.component.css']
+  selector: 'app-reflection-room2-info1',
+  templateUrl: './reflection-room2-info1.component.html',
+  styleUrls: ['./reflection-room2-info1.component.css']
 })
-export class ReflectionRoom1Component implements OnInit {
+export class ReflectionRoom2Info1Component implements OnInit {
+
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
   ngOnInit(): void {
   }
 
   // tslint:disable-next-line:typedef
-  public onRightClick(){
+  public onBackClick(){
     if (this.lockedRoomsService.roomLocked[4]){
       this.router.navigateByUrl('/reflection_room2_locked');
     }
@@ -22,11 +23,5 @@ export class ReflectionRoom1Component implements OnInit {
       this.router.navigateByUrl('/reflection_room2');
     }
   }
-
-  // tslint:disable-next-line:typedef
-  public info1Click(){
-    this.router.navigateByUrl('/reflection_room1_info1');
-  }
-
 
 }

@@ -30,9 +30,7 @@ export class ReflectionRoom2LockedComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  @HostListener('click', ['$event']) onClick(event) {
-    this.lockedRoomsService.roomLocked[4] = false;
-    this.router.navigateByUrl('/reflection_room2');
+  public info1Click(){
+    this.router.navigateByUrl('/reflection_room2_info1');
   }
-
 }

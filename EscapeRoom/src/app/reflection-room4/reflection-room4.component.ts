@@ -24,4 +24,14 @@ export class ReflectionRoom4Component implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
+  public info1Click(){
+    this.router.navigateByUrl('/reflection_room4_info1');
+  }
+
+  // tslint:disable-next-line:typedef
+  public puzzle1Click(){
+    this.router.navigateByUrl('/reflection_room4_puzzle1');
+  }
+
 }
