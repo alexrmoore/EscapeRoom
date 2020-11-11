@@ -25,4 +25,8 @@ export class InterferenceRoom4Component implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
+  public info1Click(){
+    this.router.navigateByUrl('/interference_room4_info1');
+  }
 }

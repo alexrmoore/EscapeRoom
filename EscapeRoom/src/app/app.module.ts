@@ -38,6 +38,16 @@ import { ReflectionRoom3Info1Component } from './reflection-room3-info1/reflecti
 import { ReflectionRoom4Info1Component } from './reflection-room4-info1/reflection-room4-info1.component';
 import { ReflectionRoom3Puzzle1Component } from './reflection-room3-puzzle1/reflection-room3-puzzle1.component';
 import { ReflectionRoom4Puzzle1Component } from './reflection-room4-puzzle1/reflection-room4-puzzle1.component';
+import { TimerComponent } from './timer/timer.component';
+import { InterferenceRoom1Info1Component } from './interference-room1-info1/interference-room1-info1.component';
+import { InterferenceRoom2Info1Component } from './interference-room2-info1/interference-room2-info1.component';
+import { InterferenceRoom3Info1Component } from './interference-room3-info1/interference-room3-info1.component';
+import { InterferenceRoom4Info1Component } from './interference-room4-info1/interference-room4-info1.component';
+import { InterferenceRoom5Info1Component } from './interference-room5-info1/interference-room5-info1.component';
+import { PhotoelectricRoom1Info1Component } from './photoelectric-room1-info1/photoelectric-room1-info1.component';
+import { PhotoelectricRoom2Info1Component } from './photoelectric-room2-info1/photoelectric-room2-info1.component';
+import { PhotoelectricRoom3Info1Component } from './photoelectric-room3-info1/photoelectric-room3-info1.component';
+import { PhotoelectricRoom4Info1Component } from './photoelectric-room4-info1/photoelectric-room4-info1.component';
 
 
 
@@ -72,11 +82,22 @@ const routes: Routes = [
   { path: 'interference_room4', component: InterferenceRoom4Component},
   { path: 'interference_room5', component: InterferenceRoom5Component},
 
+  { path: 'interference_room1_info1', component: InterferenceRoom1Info1Component},
+  { path: 'interference_room2_info1', component: InterferenceRoom2Info1Component},
+  { path: 'interference_room3_info1', component: InterferenceRoom3Info1Component},
+  { path: 'interference_room4_info1', component: InterferenceRoom4Info1Component},
+  { path: 'interference_room5_info1', component: InterferenceRoom5Info1Component},
+
   { path: 'photoelectric_room1', component: PhotoelectricRoom1Component},
   { path: 'photoelectric_room2', component: PhotoelectricRoom2Component},
   { path: 'photoelectric_room3', component: PhotoelectricRoom3Component},
   { path: 'photoelectric_room3_locked', component: PhotoelectricRoom3LockedComponent},
   { path: 'photoelectric_room4', component: PhotoelectricRoom4Component},
+
+  { path: 'photoelectric_room1_info1', component: PhotoelectricRoom1Info1Component},
+  { path: 'photoelectric_room2_info1', component: PhotoelectricRoom2Info1Component},
+  { path: 'photoelectric_room3_info1', component: PhotoelectricRoom3Info1Component},
+  { path: 'photoelectric_room4_info1', component: PhotoelectricRoom4Info1Component},
 
   { path: 'overall_room1', component: OverallRoom1Component},
   { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
@@ -119,14 +140,24 @@ const routes: Routes = [
     ReflectionRoom3Info1Component,
     ReflectionRoom4Info1Component,
     ReflectionRoom3Puzzle1Component,
-    ReflectionRoom4Puzzle1Component
+    ReflectionRoom4Puzzle1Component,
+    TimerComponent,
+    InterferenceRoom1Info1Component,
+    InterferenceRoom2Info1Component,
+    InterferenceRoom3Info1Component,
+    InterferenceRoom4Info1Component,
+    InterferenceRoom5Info1Component,
+    PhotoelectricRoom1Info1Component,
+    PhotoelectricRoom2Info1Component,
+    PhotoelectricRoom3Info1Component,
+    PhotoelectricRoom4Info1Component
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  providers: [LockedRoomsService],
+  providers: [LockedRoomsService, HomeComponent, TimerComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

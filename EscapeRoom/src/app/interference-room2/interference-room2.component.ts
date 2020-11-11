@@ -24,4 +24,8 @@ export class InterferenceRoom2Component implements OnInit {
     this.router.navigateByUrl('/interference_room5');
   }
 
+  // tslint:disable-next-line:typedef
+  public info1Click(){
+    this.router.navigateByUrl('/interference_room2_info1');
+  }
 }
