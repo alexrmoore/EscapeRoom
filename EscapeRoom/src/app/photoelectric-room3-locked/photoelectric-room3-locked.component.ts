@@ -31,7 +31,7 @@ export class PhotoelectricRoom3LockedComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   @HostListener('click', ['$event']) onClick(event) {
-    this.lockedRoomsService.roomLocked[13] = false;
+    this.lockedRoomsService.roomLocked[3] = false;
     this.router.navigateByUrl('/photoelectric_room3');
   }
 
