@@ -21,7 +21,7 @@ export class OverallRoom1LockedComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   @HostListener('click', ['$event']) onClick(event) {
-    this.lockedRoomsService.roomLocked[14] = false;
+    this.lockedRoomsService.roomLocked[4] = false;
     this.router.navigateByUrl('/overall_room1');
   }
 }

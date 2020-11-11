@@ -22,7 +22,7 @@ export class ReflectionRoom3Puzzle1Component implements OnInit {
     const sliderRoom3Puzzle1 = document.getElementById('room3-puzzle1-slider') as HTMLInputElement;
     this.sliderRoom3Puzzle1Value = sliderRoom3Puzzle1.value;
     if (this.sliderRoom3Puzzle1Value === '90'){
-      this.lockedRoomsService.roomLocked[4] = false;
+      this.lockedRoomsService.roomLocked[0] = false;
     }
     this.router.navigateByUrl('/reflection_room3');
   }

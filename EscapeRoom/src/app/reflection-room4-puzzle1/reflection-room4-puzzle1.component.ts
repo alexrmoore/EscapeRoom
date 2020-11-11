@@ -21,7 +21,7 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
     const sliderRoom4Puzzle1 = document.getElementById('room4-puzzle1-slider') as HTMLInputElement;
     this.sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
     if (this.sliderRoom4Puzzle1Value === '90'){
-      this.lockedRoomsService.roomLocked[4] = false;
+      this.lockedRoomsService.roomLocked[1] = false;
     }
     this.router.navigateByUrl('/reflection_room4');
   }
