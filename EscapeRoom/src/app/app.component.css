@@ -17,20 +17,4 @@
     z-index: 2;
 }
 
-.click-zone.hint {
-    background: black;
-    border: 4px groove white;
-    left: 690px;
-    top: 502px;
-    width: 100px;
-    height: 39px;
-}
 
-.click-zone.home {
-    background-image:  url(./home_button.png);
-    border: 4px groove white;
-    left: 640px;
-    top: 502px;
-    width: 39px;
-    height: 39px;
-}

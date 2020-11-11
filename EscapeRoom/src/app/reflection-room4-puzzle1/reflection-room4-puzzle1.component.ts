@@ -9,6 +9,8 @@ import { LockedRoomsService } from '../locked-rooms.service';
 })
 export class ReflectionRoom4Puzzle1Component implements OnInit {
 
+  sliderRoom4Puzzle1Value = '0';
+
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
   ngOnInit(): void {
@@ -17,8 +19,8 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public onBackClick(){
     const sliderRoom4Puzzle1 = document.getElementById('room4-puzzle1-slider') as HTMLInputElement;
-    const sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
-    if (sliderRoom4Puzzle1Value === '90'){
+    this.sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
+    if (this.sliderRoom4Puzzle1Value === '90'){
       this.lockedRoomsService.roomLocked[4] = false;
     }
     this.router.navigateByUrl('/reflection_room4');
@@ -27,8 +29,7 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   @HostListener('input', ['$event']) onSliderInput() {
     const sliderRoom4Puzzle1 = document.getElementById('room4-puzzle1-slider') as HTMLInputElement;
-    const sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
-    console.log(sliderRoom4Puzzle1Value);
+    this.sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
   }
 
 }

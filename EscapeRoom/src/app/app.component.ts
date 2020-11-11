@@ -10,19 +10,9 @@ import {Router} from '@angular/router';
 
 export class AppComponent {
   title = 'EscapeRoom';
+
   constructor(private router: Router){
     this.router.navigateByUrl('/home');
   }
-
-  // tslint:disable-next-line:typedef
-  onHintClick(){
-    console.log('Hint Button Clicked!');
-  }
-
-  // tslint:disable-next-line:typedef
-  onHomeClick(){
-    this.router.navigateByUrl('/home');
-  }
-
 }
 
