@@ -14,23 +14,15 @@
 
 .inputbox{
     position: absolute;
-    left: 300px;
-    top: 250px;
-}
-
-.testtextbox {
-    position: absolute;
-    left: 150px;
-    top: 50px;
-    z-index: 3;
-    font-size: large;
+    left: 550px;
+    top: 330px;
 }
 
 .titletextbox {
     position: absolute;
     font-weight: bold;
     left: 150px;
-    top: 80px;
+    top: 50px;
     z-index: 4;
     font-size: xx-large;
 }
@@ -48,5 +40,32 @@
     top: 0px;
     width: 140px;
     height: 60px;
+}
+
+.greenlight {
+    position: absolute;
+    background-image: url(../green_light.png);
+    left: 600px;
+    top: 190px;
+    width: 45px;
+    height: 100px;
+}
+
+.redlight {
+    position: absolute;
+    background-image: url(../red_light.png);
+    left: 600px;
+    top: 190px;
+    width: 45px;
+    height: 100px;
+}
+
+.puzzlediagram{
+    position: absolute;
+    background-image: url(../reflection_puzzle_wave_359x350.png);
+    left: 100px;
+    top: 100px;
+    width: 359px;
+    height: 350px;
 }
 

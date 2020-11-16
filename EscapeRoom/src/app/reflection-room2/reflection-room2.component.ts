@@ -39,4 +39,9 @@ export class ReflectionRoom2Component implements OnInit {
   public info1Click(){
     this.router.navigateByUrl('/reflection_room2_info1');
   }
+
+  // tslint:disable-next-line:typedef
+  public puzzle1Click(){
+    this.router.navigateByUrl('/reflection_room2_puzzle1');
+  }
 }

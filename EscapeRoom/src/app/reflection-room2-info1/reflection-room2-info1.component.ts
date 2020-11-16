@@ -16,7 +16,7 @@ export class ReflectionRoom2Info1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onBackClick(){
-    if (this.lockedRoomsService.roomLocked[0] || this.lockedRoomsService.roomLocked[1]){
+    if (this.lockedRoomsService.roomLocked[0] || this.lockedRoomsService.roomLocked[1] || this.lockedRoomsService.roomLocked[2]){
       this.router.navigateByUrl('/reflection_room2_locked');
     }
     else {

@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class TimerComponent implements OnInit {
   stopwatch: number;
+  stopwatchSeconds: number;
   timerRef;
   newstart = true;
 
@@ -23,7 +24,8 @@ export class TimerComponent implements OnInit {
     this.homeComponent.PhysicsPathStart();
     const startTime = Date.now() - (this.stopwatch || 0);
     this.timerRef = setInterval(() => {
-      this.stopwatch = Date.now() - startTime;
+      this.stopwatch = (Date.now() - startTime) / 1000;
+      this.stopwatchSeconds = Math.floor(this.stopwatch);
     });
     this.newstart = false;
   }
@@ -33,6 +35,7 @@ export class TimerComponent implements OnInit {
   onHomeClick(){
     this.newstart = true;
     this.stopwatch = undefined;
+    this.stopwatchSeconds = undefined;
     clearInterval(this.timerRef);
     this.router.navigateByUrl('/home');
   }

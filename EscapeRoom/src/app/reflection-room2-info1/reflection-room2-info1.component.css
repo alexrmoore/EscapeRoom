@@ -12,21 +12,43 @@
     border: 0px groove yellow;
 }
 
-.testtextbox {
-    position: absolute;
-    left: 150px;
-    top: 50px;
-    z-index: 3;
-    font-size: large;
-}
-
 .titletextbox {
     position: absolute;
     font-weight: bold;
-    left: 150px;
+    left: 130px;
     top: 80px;
     z-index: 4;
     font-size: xx-large;
+}
+
+.infotextbox {
+    position: absolute;
+    left: 150px;
+    top: 430px;
+    z-index: 4;
+    font-size: 20px;
+}
+
+.lawofreflection{
+    position: absolute;
+    left: 140px;
+    top: 200px;
+    height: 90px;
+    width: 220px;
+    text-align: center;
+    z-index: 4;
+    font-size: 70px;
+    font-style: italic;
+    border: 3px solid black;   
+}
+
+.lawofreflectiondiagram{
+    position: absolute;
+    background-image: url(../lawofreflection_261x250.png);
+    left: 480px;
+    top: 120px;
+    width: 261px;
+    height: 250px;
 }
 
 .click-zone {
@@ -41,6 +63,5 @@
     left: 0px;
     top: 0px;
     width: 140px;
-    height: 60px;
+    height: 59px;
 }
-

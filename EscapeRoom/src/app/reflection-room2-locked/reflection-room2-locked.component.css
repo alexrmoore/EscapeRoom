@@ -37,25 +37,37 @@
 
 .click-zone.down {
     left: 340px;
-    top: 450px;
+    top: 470px;
     width: 120px;
     height: 30px;
-}
-
-.testtextbox {
-    position: absolute;
-    left: 350px;
-    top: 150px;
-    z-index: 3;
-    font-size: xx-large;
 }
 
 .click-zone.info1 {
     background: none;
     background-image: url(../info_book.png);
     cursor: pointer;
-    left: 350px;
+    left: 300px;
     top: 280px;
+    width: 100px;
+    height: 100px;
+}
+
+.click-zone.puzzle1 {
+    background: none;
+    background-image: url(../puzzle_piece.png);
+    cursor: pointer;
+    left: 480px;
+    top: 140px;
+    width: 100px;
+    height: 100px;
+}
+
+.puzzle1locked{
+    position: absolute;
+    background: none;
+    background-image: url(../puzzle_piece_locked.png);
+    left: 480px;
+    top: 140px;
     width: 100px;
     height: 100px;
 }
