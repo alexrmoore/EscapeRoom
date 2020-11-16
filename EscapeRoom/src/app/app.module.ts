@@ -48,6 +48,7 @@ import { PhotoelectricRoom1Info1Component } from './photoelectric-room1-info1/ph
 import { PhotoelectricRoom2Info1Component } from './photoelectric-room2-info1/photoelectric-room2-info1.component';
 import { PhotoelectricRoom3Info1Component } from './photoelectric-room3-info1/photoelectric-room3-info1.component';
 import { PhotoelectricRoom4Info1Component } from './photoelectric-room4-info1/photoelectric-room4-info1.component';
+import { ReflectionRoom2Puzzle1Component } from './reflection-room2-puzzle1/reflection-room2-puzzle1.component';
 
 
 
@@ -72,6 +73,7 @@ const routes: Routes = [
   { path: 'reflection_room2_info1', component: ReflectionRoom2Info1Component },
   { path: 'reflection_room3_info1', component: ReflectionRoom3Info1Component },
   { path: 'reflection_room4_info1', component: ReflectionRoom4Info1Component },
+  { path: 'reflection_room2_puzzle1', component: ReflectionRoom2Puzzle1Component },
   { path: 'reflection_room3_puzzle1', component: ReflectionRoom3Puzzle1Component },
   { path: 'reflection_room4_puzzle1', component: ReflectionRoom4Puzzle1Component },
 
@@ -150,7 +152,8 @@ const routes: Routes = [
     PhotoelectricRoom1Info1Component,
     PhotoelectricRoom2Info1Component,
     PhotoelectricRoom3Info1Component,
-    PhotoelectricRoom4Info1Component
+    PhotoelectricRoom4Info1Component,
+    ReflectionRoom2Puzzle1Component
   ],
   imports: [
     BrowserModule,

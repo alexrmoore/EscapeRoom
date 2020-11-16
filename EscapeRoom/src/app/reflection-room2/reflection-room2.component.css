@@ -61,8 +61,18 @@
     background: none;
     background-image: url(../info_book.png);
     cursor: pointer;
-    left: 350px;
+    left: 300px;
     top: 280px;
+    width: 100px;
+    height: 100px;
+}
+
+.click-zone.puzzle1 {
+    background: none;
+    background-image: url(../puzzle_piece.png);
+    cursor: pointer;
+    left: 480px;
+    top: 140px;
     width: 100px;
     height: 100px;
 }

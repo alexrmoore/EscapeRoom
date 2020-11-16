@@ -9,6 +9,8 @@ import { LockedRoomsService } from '../locked-rooms.service';
 })
 export class ReflectionRoom2LockedComponent implements OnInit {
 
+  hidePuzzle1 = (this.lockedRoomsService.roomLocked[0] || this.lockedRoomsService.roomLocked[1]);
+
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {}
 
   ngOnInit(): void {
@@ -32,5 +34,10 @@ export class ReflectionRoom2LockedComponent implements OnInit {
   // tslint:disable-next-line:typedef
   public info1Click(){
     this.router.navigateByUrl('/reflection_room2_info1');
+  }
+
+  // tslint:disable-next-line:typedef
+  public puzzle1Click(){
+    this.router.navigateByUrl('/reflection_room2_puzzle1');
   }
 }

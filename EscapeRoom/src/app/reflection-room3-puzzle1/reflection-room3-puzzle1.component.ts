@@ -11,6 +11,7 @@ import { LockedRoomsService } from '../locked-rooms.service';
 export class ReflectionRoom3Puzzle1Component implements OnInit {
 
   sliderRoom3Puzzle1Value = '0';
+  puzzleWon = !(this.lockedRoomsService.roomLocked[0]);
 
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
@@ -19,12 +20,17 @@ export class ReflectionRoom3Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onBackClick(){
+    this.router.navigateByUrl('/reflection_room3');
+  }
+
+  // tslint:disable-next-line:typedef
+  public submitClick(){
     const sliderRoom3Puzzle1 = document.getElementById('room3-puzzle1-slider') as HTMLInputElement;
     this.sliderRoom3Puzzle1Value = sliderRoom3Puzzle1.value;
-    if (this.sliderRoom3Puzzle1Value === '90'){
+    if (this.sliderRoom3Puzzle1Value === '25'){
       this.lockedRoomsService.roomLocked[0] = false;
+      this.puzzleWon = true;
     }
-    this.router.navigateByUrl('/reflection_room3');
   }
 
   // tslint:disable-next-line:typedef
