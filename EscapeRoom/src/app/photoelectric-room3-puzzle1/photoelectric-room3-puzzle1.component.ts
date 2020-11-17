@@ -32,13 +32,25 @@ export class PhotoelectricRoom3Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   dragEnd1(event: CdkDragEnd) {
     this.dragPositionX1 = event.source.getFreeDragPosition().x;
-    this.dragPositionY1 = event.source.getFreeDragPosition().y;
+    this.dragPositionY1 = event.source.getFreeDragPosition().y;  // There is definitely a way to do this in one function
+    this.dragEnd();
   }
 
   // tslint:disable-next-line:typedef
   dragEnd2(event: CdkDragEnd) {
     this.dragPositionX2 = event.source.getFreeDragPosition().x;
     this.dragPositionY2 = event.source.getFreeDragPosition().y;
+    this.dragEnd();
   }
 
+  // PUT ALL DRAG BOXES IN ONE FUNCTION
+
+  // tslint:disable-next-line:typedef
+  dragEnd() {
+    if (this.dragPositionX1 > 600 && this.dragPositionX2 > 600){
+      if (this.dragPositionY1 > 200 && this.dragPositionY2 > 200) {
+        this.lockedRoomsService.roomLocked[4] = false;
+      }
+    }
+  }
 }

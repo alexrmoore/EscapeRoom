@@ -4,11 +4,13 @@
     <div class="titletextbox" style="font-family: Arial">
         Drag and Drop 1: {{dragPositionX1}},{{dragPositionY1}}
     <br >Drag and Drop 2: {{dragPositionX2}},{{dragPositionY2}}</div>
-    <div class="example-box1" cdkDrag (cdkDragEnded)="dragEnd1($event)">
-        Drag me around #1
-      </div>
-    <div class="example-box2" cdkDrag (cdkDragEnded)="dragEnd2($event)">
-        Drag me around #2
+    <div class="example-boundary">
+        <div class="example-box1" cdkDragBoundary=".example-boundary" cdkDrag (cdkDragEnded)="dragEnd1($event)">
+            Drag me around #1
         </div>
+        <div class="example-box2" cdkDragBoundary=".example-boundary" cdkDrag (cdkDragEnded)="dragEnd2($event)">
+            Drag me around #2
+            </div>
+    </div>
 </div>
 
