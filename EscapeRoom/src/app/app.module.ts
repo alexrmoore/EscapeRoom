@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LockedRoomsService } from './locked-rooms.service';
@@ -49,6 +51,7 @@ import { PhotoelectricRoom2Info1Component } from './photoelectric-room2-info1/ph
 import { PhotoelectricRoom3Info1Component } from './photoelectric-room3-info1/photoelectric-room3-info1.component';
 import { PhotoelectricRoom4Info1Component } from './photoelectric-room4-info1/photoelectric-room4-info1.component';
 import { ReflectionRoom2Puzzle1Component } from './reflection-room2-puzzle1/reflection-room2-puzzle1.component';
+import { PhotoelectricRoom3Puzzle1Component } from './photoelectric-room3-puzzle1/photoelectric-room3-puzzle1.component';
 
 
 
@@ -100,6 +103,7 @@ const routes: Routes = [
   { path: 'photoelectric_room2_info1', component: PhotoelectricRoom2Info1Component},
   { path: 'photoelectric_room3_info1', component: PhotoelectricRoom3Info1Component},
   { path: 'photoelectric_room4_info1', component: PhotoelectricRoom4Info1Component},
+  { path: 'photoelectric_room3_puzzle1', component: PhotoelectricRoom3Puzzle1Component},
 
   { path: 'overall_room1', component: OverallRoom1Component},
   { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
@@ -153,11 +157,13 @@ const routes: Routes = [
     PhotoelectricRoom2Info1Component,
     PhotoelectricRoom3Info1Component,
     PhotoelectricRoom4Info1Component,
-    ReflectionRoom2Puzzle1Component
+    ReflectionRoom2Puzzle1Component,
+    PhotoelectricRoom3Puzzle1Component
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DragDropModule
   ],
   exports: [RouterModule],
   providers: [LockedRoomsService, HomeComponent, TimerComponent],

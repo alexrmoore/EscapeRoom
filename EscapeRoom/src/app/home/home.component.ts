@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/reflection_room1');
     // tslint:disable-next-line:max-line-length
     // this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, false, true, false, false, false, true, true];
-    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [false, false, false, true, true, true];
+    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true];
   }
 
   // tslint:disable-next-line:typedef
