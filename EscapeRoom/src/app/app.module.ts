@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LockedRoomsService } from './locked-rooms.service';
@@ -160,7 +162,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DragDropModule
   ],
   exports: [RouterModule],
   providers: [LockedRoomsService, HomeComponent, TimerComponent],
