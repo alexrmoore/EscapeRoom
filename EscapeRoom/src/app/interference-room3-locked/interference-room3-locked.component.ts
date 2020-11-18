@@ -30,6 +30,11 @@ export class InterferenceRoom3LockedComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
+  public puzzle1Click(){
+    this.router.navigateByUrl('/interference_room3_puzzle1');
+  }
+
+  // tslint:disable-next-line:typedef
   @HostListener('click', ['$event']) onClick(event) {
     this.lockedRoomsService.roomLocked[3] = false;
     this.router.navigateByUrl('/interference_room3');
