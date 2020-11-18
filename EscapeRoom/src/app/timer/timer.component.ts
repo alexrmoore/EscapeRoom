@@ -13,6 +13,7 @@ export class TimerComponent implements OnInit {
   stopwatchSeconds: number;
   timerRef;
   newstart = true;
+  hideTimer = false;
 
   constructor(private router: Router, private homeComponent: HomeComponent) { }
 
@@ -22,6 +23,8 @@ export class TimerComponent implements OnInit {
   // tslint:disable-next-line:typedef
   startTimer(){
     this.homeComponent.PhysicsPathStart();
+    this.hideTimer = this.homeComponent.hideTimer;
+
     const startTime = Date.now() - (this.stopwatch || 0);
     this.timerRef = setInterval(() => {
       this.stopwatch = (Date.now() - startTime) / 1000;

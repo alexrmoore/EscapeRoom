@@ -9,6 +9,7 @@ import { LockedRoomsService } from '../locked-rooms.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  hideTimer = false;
 
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) {}
 
@@ -17,6 +18,8 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   public PhysicsPathStart(){
+    const timercheckbox = document.getElementById('hide-timer') as HTMLInputElement;
+    this.hideTimer = timercheckbox.checked;
     this.router.navigateByUrl('/reflection_room1');
     // tslint:disable-next-line:max-line-length
     // this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, false, true, false, false, false, true, true];
