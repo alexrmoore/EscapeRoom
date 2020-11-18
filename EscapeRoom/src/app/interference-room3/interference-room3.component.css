@@ -58,3 +58,13 @@
     width: 100px;
     height: 100px;
 }
+
+.click-zone.puzzle1 {
+    background: none;
+    background-image: url(../puzzle_piece.png);
+    cursor: pointer;
+    left: 170px;
+    top: 80px;
+    width: 100px;
+    height: 100px;
+}

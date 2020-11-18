@@ -34,4 +34,9 @@ export class InterferenceRoom3Component implements OnInit {
     this.router.navigateByUrl('/interference_room3_info1');
   }
 
+  // tslint:disable-next-line:typedef
+  public puzzle1Click(){
+    this.router.navigateByUrl('/interference_room3_puzzle1');
+  }
+
 }
