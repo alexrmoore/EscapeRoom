@@ -46,9 +46,12 @@ export class PhotoelectricRoom3Puzzle1Component implements OnInit {
   // PUT ALL DRAG BOXES IN ONE FUNCTION
 
   // tslint:disable-next-line:typedef
-  dragEnd() {
-    if (this.dragPositionX1 > 600 && this.dragPositionX2 > 600){
-      if (this.dragPositionY1 > 200 && this.dragPositionY2 > 200) {
+  dragEnd() {}
+
+  // tslint:disable-next-line:typedef
+  public submitClick(){
+    if (this.dragPositionX1 > 180 && this.dragPositionX1 < 200 && this.dragPositionY1 > 90 && this.dragPositionY1 < 110){
+      if (this.dragPositionX2 > -220 && this.dragPositionX2 < -200 && this.dragPositionY2 > -50 && this.dragPositionY2 < -30) {
         this.lockedRoomsService.roomLocked[4] = false;
       }
     }

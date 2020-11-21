@@ -12,6 +12,12 @@
     border: 0px groove yellow;
 }
 
+.inputbox{
+    position: absolute;
+    left: 370px;
+    top: 440px;
+  }
+
 .titletextbox {
     position: absolute;
     font-weight: bold;
@@ -37,6 +43,7 @@
 }
 
 .moveable-waveform {
+    left: 250px;
     width:500px;
     height: 228px;
     cursor: move;
