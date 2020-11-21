@@ -31,4 +31,11 @@ export class InterferenceRoom3Puzzle1Component implements OnInit {
     this.waveDragPositionX = event.source.getFreeDragPosition().x;
   }
 
+  // tslint:disable-next-line:typedef
+  public submitClick(){
+    if (this.waveDragPositionX === -250) {
+      this.lockedRoomsService.roomLocked[3] = false;
+    }
+  }
+
 }

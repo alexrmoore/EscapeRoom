@@ -2,6 +2,9 @@
     <div class="video"></div>
     <div class="click-zone back" (click)="onBackClick()"></div>
     <div class="titletextbox" style="font-family: Arial">Current X-position: {{waveDragPositionX}} </div>
+    <div class="inputbox">
+        <button (click)="submitClick()">Submit</button>
+    </div>
     <div class="waveform-boundary">
         <div class="moveable-waveform" cdkDragBoundary=".waveform-boundary" cdkDragLockAxis="x" cdkDrag (cdkDragEnded)="waveDragEnd($event)"></div>
         <div class="hiderblock1"></div>
