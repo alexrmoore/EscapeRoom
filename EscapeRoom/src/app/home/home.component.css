@@ -14,7 +14,7 @@
 
 .inputbox{
     position: absolute;
-    left: 370px;
+    left: 347px;
     top: 400px;
 }
 
@@ -37,4 +37,13 @@
     top: 470px;
     width: 800px;
     height: 30px;
+}
+
+.click-zone.instructions {
+    background-color:green;
+    left: 0px;
+    top: 440px;
+    width: 800px;
+    height: 30px;
+    font-size: 20px;
 }
