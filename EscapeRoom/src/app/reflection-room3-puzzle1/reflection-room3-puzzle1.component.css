@@ -62,10 +62,10 @@
 
 .puzzlediagram{
     position: absolute;
-    background-image: url(../reflection_puzzle_wave_359x350.png);
-    left: 100px;
-    top: 100px;
-    width: 359px;
-    height: 350px;
+    background-image: url(../reflection_puzzle_wave_2_256x420.png);
+    left: 120px;
+    top: 30px;
+    width: 256px;
+    height: 420px;
 }
 
