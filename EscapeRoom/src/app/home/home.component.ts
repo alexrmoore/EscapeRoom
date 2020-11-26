@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     // this.lockedRoomsService.roomLocked = [false, false, false, false, true, false, false, false, false, true, false, false, false, true, true];
     // this.lockedRoomsService.roomLocked = [false, false, false, true, true, true];
-    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true];
+    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false];
   }
 
   // tslint:disable-next-line:typedef
