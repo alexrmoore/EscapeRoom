@@ -4,5 +4,16 @@
     <div class="titletextbox" style="font-family: Arial"></div>
     <div class="greenlight" *ngIf="puzzleWon"></div>
     <div class="redlight" *ngIf="!puzzleWon"></div> 
+    <div class="inputbox">
+        <input type="checkbox" id="photoelectriccheckbox_a">
+        <label for="photoelectriccheckbox_a"> A</label><br><br>
+        <input type="checkbox" id="photoelectriccheckbox_b">
+        <label for="photoelectriccheckbox_a"> B</label><br><br>
+        <input type="checkbox" id="photoelectriccheckbox_c">
+        <label for="photoelectriccheckbox_c"> C</label><br><br>
+        <input type="checkbox" id="photoelectriccheckbox_d">
+        <label for="photoelectriccheckbox_d"> D</label><br><br>
+        <button (click)="submitClick()">Submit</button>
+    </div>
 </div>
 

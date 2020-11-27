@@ -14,9 +14,8 @@
 
 .inputbox{
   position: absolute;
-  left: 370px;
-  top: 440px;
-  z-index: 10;
+  left: 100px;
+  top: 140px;
 }
 
 .titletextbox {

@@ -4,5 +4,16 @@
     <div class="titletextbox" style="font-family: Arial"></div>
     <div class="greenlight" *ngIf="puzzleWon"></div>
     <div class="redlight" *ngIf="!puzzleWon"></div> 
+    <div class="inputbox">
+        <input type="checkbox" id="interferencecheckbox_a">
+        <label for="interferencecheckbox_a"> A</label><br><br>
+        <input type="checkbox" id="interferencecheckbox_b">
+        <label for="interferencecheckbox_a"> B</label><br><br>
+        <input type="checkbox" id="interferencecheckbox_c">
+        <label for="interferencecheckbox_c"> C</label><br><br>
+        <input type="checkbox" id="interferencecheckbox_d">
+        <label for="interferencecheckbox_d"> D</label><br><br>
+        <button (click)="submitClick()">Submit</button>
+    </div>
 </div>
 

@@ -24,4 +24,18 @@ export class PhotoelectricRoom3Puzzle1Component implements OnInit {
       this.router.navigateByUrl('/photoelectric_room3');
     }
   }
+
+  // tslint:disable-next-line:typedef
+  public submitClick(){
+    const photoelectriccheckboxA = document.getElementById('photoelectriccheckbox_a') as HTMLInputElement;
+    const photoelectriccheckboxB = document.getElementById('photoelectriccheckbox_b') as HTMLInputElement;
+    const photoelectriccheckboxC = document.getElementById('photoelectriccheckbox_c') as HTMLInputElement;
+    const photoelectriccheckboxD = document.getElementById('photoelectriccheckbox_d') as HTMLInputElement;
+
+    // tslint:disable-next-line:max-line-length
+    if (photoelectriccheckboxA.checked && !photoelectriccheckboxB.checked && !photoelectriccheckboxC.checked && !photoelectriccheckboxD.checked) {
+      this.lockedRoomsService.roomLocked[6] = false;
+      this.puzzleWon = true;
+    }
+  }
 }
