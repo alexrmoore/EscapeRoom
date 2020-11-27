@@ -54,6 +54,7 @@ export class TimerComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onHintClick(){
     console.log('Hint Button Clicked!');
+    console.log(this.lockedRoomsService.roomLocked);
   }
 
 }
