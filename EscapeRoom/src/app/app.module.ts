@@ -54,6 +54,9 @@ import { ReflectionRoom2Puzzle1Component } from './reflection-room2-puzzle1/refl
 import { PhotoelectricRoom3Puzzle1Component } from './photoelectric-room3-puzzle1/photoelectric-room3-puzzle1.component';
 import { InterferenceRoom3Puzzle1Component } from './interference-room3-puzzle1/interference-room3-puzzle1.component';
 import { InstructionScreenComponent } from './instruction-screen/instruction-screen.component';
+import { OverallRoom1Puzzle1Component } from './overall-room1-puzzle1/overall-room1-puzzle1.component';
+import { PhotoelectricRoom4Puzzle1Component } from './photoelectric-room4-puzzle1/photoelectric-room4-puzzle1.component';
+import { InterferenceRoom4Puzzle1Component } from './interference-room4-puzzle1/interference-room4-puzzle1.component';
 
 
 
@@ -97,6 +100,7 @@ const routes: Routes = [
   { path: 'interference_room4_info1', component: InterferenceRoom4Info1Component},
   { path: 'interference_room5_info1', component: InterferenceRoom5Info1Component},
   { path: 'interference_room3_puzzle1', component: InterferenceRoom3Puzzle1Component},
+  { path: 'interference_room4_puzzle1', component: InterferenceRoom4Puzzle1Component},
 
   { path: 'photoelectric_room1', component: PhotoelectricRoom1Component},
   { path: 'photoelectric_room2', component: PhotoelectricRoom2Component},
@@ -109,9 +113,12 @@ const routes: Routes = [
   { path: 'photoelectric_room3_info1', component: PhotoelectricRoom3Info1Component},
   { path: 'photoelectric_room4_info1', component: PhotoelectricRoom4Info1Component},
   { path: 'photoelectric_room3_puzzle1', component: PhotoelectricRoom3Puzzle1Component},
+  { path: 'photoelectric_room4_puzzle1', component: PhotoelectricRoom4Puzzle1Component},
 
   { path: 'overall_room1', component: OverallRoom1Component},
   { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
+
+  { path: 'overall_room1_puzzle1', component: OverallRoom1Puzzle1Component},
 
   { path: 'complete_room', component: CompleteRoomComponent}
 ];
@@ -165,7 +172,10 @@ const routes: Routes = [
     ReflectionRoom2Puzzle1Component,
     PhotoelectricRoom3Puzzle1Component,
     InterferenceRoom3Puzzle1Component,
-    InstructionScreenComponent
+    InstructionScreenComponent,
+    OverallRoom1Puzzle1Component,
+    PhotoelectricRoom4Puzzle1Component,
+    InterferenceRoom4Puzzle1Component
   ],
   imports: [
     BrowserModule,
