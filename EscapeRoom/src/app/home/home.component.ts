@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     const timercheckbox = document.getElementById('hide-timer') as HTMLInputElement;
     this.hideTimer = timercheckbox.checked;
     this.router.navigateByUrl('/reflection_room1');
-    // tslint:disable-next-line:max-line-length
 
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, true, true, true];
