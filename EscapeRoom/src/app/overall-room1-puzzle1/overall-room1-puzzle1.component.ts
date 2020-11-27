@@ -8,7 +8,7 @@ import { LockedRoomsService } from '../locked-rooms.service';
   styleUrls: ['./overall-room1-puzzle1.component.css']
 })
 export class OverallRoom1Puzzle1Component implements OnInit {
-  puzzleWon = true;
+  puzzleWon = !(this.lockedRoomsService.roomLocked[7]);
 
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
 
@@ -17,7 +17,12 @@ export class OverallRoom1Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onBackClick(){
-    this.router.navigateByUrl('/overall_room1');
+    if (this.lockedRoomsService.roomLocked[7]){
+      this.router.navigateByUrl('/overall_room1_locked');
+    }
+    else {
+      this.router.navigateByUrl('/overall_room1');
+    }
   }
 
 }
