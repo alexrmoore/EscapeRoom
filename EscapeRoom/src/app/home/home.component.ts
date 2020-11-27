@@ -31,11 +31,5 @@ export class HomeComponent implements OnInit {
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, true, true, true];
     this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
   }
-
-  // tslint:disable-next-line:typedef
-  public OldPathStart(){
-    this.lockedRoomsService.roomLockedTestPath = [false, false, true, true];
-    this.router.navigateByUrl('/room1');
-  }
 }
 
