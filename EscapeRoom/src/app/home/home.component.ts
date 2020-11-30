@@ -28,8 +28,8 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/reflection_room1');
 
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
-    this.lockedRoomsService.roomLocked = [false, false, false, true, true, true, true, true];
-    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
+    // this.lockedRoomsService.roomLocked = [false, false, false, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
   }
 }
 
