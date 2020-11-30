@@ -31,9 +31,9 @@ export class InterferenceRoom3Puzzle1Component implements OnInit {
     const interferencecheckboxB = document.getElementById('interferencecheckbox_b') as HTMLInputElement;
     const interferencecheckboxC = document.getElementById('interferencecheckbox_c') as HTMLInputElement;
     const interferencecheckboxD = document.getElementById('interferencecheckbox_d') as HTMLInputElement;
-
+    const interferencecheckboxE = document.getElementById('interferencecheckbox_e') as HTMLInputElement;
     // tslint:disable-next-line:max-line-length
-    if (interferencecheckboxA.checked && !interferencecheckboxB.checked && !interferencecheckboxC.checked && !interferencecheckboxD.checked) {
+    if (interferencecheckboxA.checked && !interferencecheckboxB.checked && !interferencecheckboxC.checked && interferencecheckboxD.checked && !interferencecheckboxE.checked) {
       this.lockedRoomsService.roomLocked[4] = false;
       this.puzzleWon = true;
     }
