@@ -51,6 +51,7 @@ import { InstructionScreenComponent } from './instruction-screen/instruction-scr
 import { OverallRoom1Puzzle1Component } from './overall-room1-puzzle1/overall-room1-puzzle1.component';
 import { PhotoelectricRoom4Puzzle1Component } from './photoelectric-room4-puzzle1/photoelectric-room4-puzzle1.component';
 import { InterferenceRoom4Puzzle1Component } from './interference-room4-puzzle1/interference-room4-puzzle1.component';
+import { AnonymousIdentifierService } from './anonymous-identifier.service';
 
 
 
@@ -164,7 +165,7 @@ const routes: Routes = [
     DragDropModule
   ],
   exports: [RouterModule],
-  providers: [LockedRoomsService, HomeComponent, TimerComponent],
+  providers: [LockedRoomsService, AnonymousIdentifierService, HomeComponent, TimerComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
