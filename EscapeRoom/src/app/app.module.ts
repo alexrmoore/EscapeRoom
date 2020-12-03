@@ -52,12 +52,14 @@ import { OverallRoom1Puzzle1Component } from './overall-room1-puzzle1/overall-ro
 import { PhotoelectricRoom4Puzzle1Component } from './photoelectric-room4-puzzle1/photoelectric-room4-puzzle1.component';
 import { InterferenceRoom4Puzzle1Component } from './interference-room4-puzzle1/interference-room4-puzzle1.component';
 import { AnonymousIdentifierService } from './anonymous-identifier.service';
+import { SecondScreenComponent } from './second-screen/second-screen.component';
 
 
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'secondscreen', component: SecondScreenComponent},
   { path: 'instructions', component: InstructionScreenComponent },
   { path: 'endscreen', component: EndscreenComponent},
 
@@ -157,7 +159,8 @@ const routes: Routes = [
     InstructionScreenComponent,
     OverallRoom1Puzzle1Component,
     PhotoelectricRoom4Puzzle1Component,
-    InterferenceRoom4Puzzle1Component
+    InterferenceRoom4Puzzle1Component,
+    SecondScreenComponent
   ],
   imports: [
     BrowserModule,
