@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
+import { TimersService } from '../timers.service';
 
 @Component({
   selector: 'app-second-screen',
@@ -9,8 +10,11 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 })
 export class SecondScreenComponent implements OnInit {
   startSurveyURL = 'https://docs.google.com/forms/d/e/1FAIpQLScQiXQCsGKx1eoWEpBK8qvIgA3NkivqVyX4whowTCR7MUFBiQ/viewform?usp=pp_url&entry.906372509=';
+  secondscreenTimerRef;
+  overallTimerValue: number;
 
-  constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService) {}
+  // tslint:disable-next-line:max-line-length
+  constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService, private timersService: TimersService) {}
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
@@ -27,5 +31,9 @@ export class SecondScreenComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.startSurveyURL = this.startSurveyURL.concat(this.anonymousCode);
     window.open(this.startSurveyURL, '_blank');
+    this.timersService.startOverallTimer();
+    this.secondscreenTimerRef = setInterval(() => {
+      this.overallTimerValue = this.timersService.overallStopwatchSeconds;
+    });
   }
 }
