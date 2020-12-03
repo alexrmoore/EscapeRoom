@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   public PhysicsPathStart(){
     const timercheckbox = document.getElementById('hide-timer') as HTMLInputElement;
     this.hideTimer = timercheckbox.checked;
-    this.router.navigateByUrl('/reflection_room1');
+    this.router.navigateByUrl('/secondscreen');
 
     this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
     // this.lockedRoomsService.roomLocked = [false, false, false, true, true, true, true, true];
