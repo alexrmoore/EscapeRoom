@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/secondscreen');
 
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
-    // this.lockedRoomsService.roomLocked = [false, false, false, true, true, true, true, true];
-    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, true, true];
+    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
   }
 }
 
