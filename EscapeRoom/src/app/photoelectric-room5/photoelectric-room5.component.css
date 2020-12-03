@@ -31,7 +31,17 @@
     background: none;
     background-image: url(../info_book.png);
     cursor: pointer;
-    left: 350px;
+    left: 220px;
+    top: 280px;
+    width: 100px;
+    height: 100px;
+}
+
+.click-zone.info2 {
+    background: none;
+    background-image: url(../info_book.png);
+    cursor: pointer;
+    left: 550px;
     top: 280px;
     width: 100px;
     height: 100px;

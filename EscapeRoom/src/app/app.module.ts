@@ -56,6 +56,7 @@ import { SecondScreenComponent } from './second-screen/second-screen.component';
 import { TimersService } from './timers.service';
 import { PhotoelectricRoom5Component } from './photoelectric-room5/photoelectric-room5.component';
 import { PhotoelectricRoom5Info1Component } from './photoelectric-room5-info1/photoelectric-room5-info1.component';
+import { PhotoelectricRoom5Info2Component } from './photoelectric-room5-info2/photoelectric-room5-info2.component';
 
 
 
@@ -109,6 +110,7 @@ const routes: Routes = [
   { path: 'photoelectric_room3_puzzle1', component: PhotoelectricRoom3Puzzle1Component},
   { path: 'photoelectric_room4_puzzle1', component: PhotoelectricRoom4Puzzle1Component},
   { path: 'photoelectric_room5_info1', component: PhotoelectricRoom5Info1Component},
+  { path: 'photoelectric_room5_info2', component: PhotoelectricRoom5Info2Component},
 
   { path: 'overall_room1', component: OverallRoom1Component},
   { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
@@ -167,7 +169,8 @@ const routes: Routes = [
     InterferenceRoom4Puzzle1Component,
     SecondScreenComponent,
     PhotoelectricRoom5Component,
-    PhotoelectricRoom5Info1Component
+    PhotoelectricRoom5Info1Component,
+    PhotoelectricRoom5Info2Component
   ],
   imports: [
     BrowserModule,
