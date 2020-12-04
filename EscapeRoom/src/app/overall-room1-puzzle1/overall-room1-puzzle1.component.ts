@@ -25,4 +25,9 @@ export class OverallRoom1Puzzle1Component implements OnInit {
     }
   }
 
+  // tslint:disable-next-line:typedef
+  public submitClick(){
+    console.log('submit clicked');
+  }
+
 }
