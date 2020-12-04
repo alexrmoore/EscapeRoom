@@ -57,6 +57,7 @@ import { TimersService } from './timers.service';
 import { PhotoelectricRoom5Component } from './photoelectric-room5/photoelectric-room5.component';
 import { PhotoelectricRoom5Info1Component } from './photoelectric-room5-info1/photoelectric-room5-info1.component';
 import { PhotoelectricRoom5Info2Component } from './photoelectric-room5-info2/photoelectric-room5-info2.component';
+import { OverallRoom1Info1Component } from './overall-room1-info1/overall-room1-info1.component';
 
 
 
@@ -114,6 +115,7 @@ const routes: Routes = [
 
   { path: 'overall_room1', component: OverallRoom1Component},
   { path: 'overall_room1_locked', component: OverallRoom1LockedComponent},
+  { path: 'overall_room1_info1', component: OverallRoom1Info1Component},
 
   { path: 'overall_room1_puzzle1', component: OverallRoom1Puzzle1Component},
 
@@ -170,7 +172,8 @@ const routes: Routes = [
     SecondScreenComponent,
     PhotoelectricRoom5Component,
     PhotoelectricRoom5Info1Component,
-    PhotoelectricRoom5Info2Component
+    PhotoelectricRoom5Info2Component,
+    OverallRoom1Info1Component
   ],
   imports: [
     BrowserModule,
