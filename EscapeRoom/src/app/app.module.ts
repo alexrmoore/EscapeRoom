@@ -59,15 +59,20 @@ import { PhotoelectricRoom5Info1Component } from './photoelectric-room5-info1/ph
 import { PhotoelectricRoom5Info2Component } from './photoelectric-room5-info2/photoelectric-room5-info2.component';
 import { OverallRoom1Info1Component } from './overall-room1-info1/overall-room1-info1.component';
 import { OverallRoom1Info2Component } from './overall-room1-info2/overall-room1-info2.component';
+import { TitlescreenComponent } from './titlescreen/titlescreen.component';
+import { FooterComponent } from './footer/footer.component';
+import { CongratulationsscreenComponent } from './congratulationsscreen/congratulationsscreen.component';
 
 
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'title', component: TitlescreenComponent },
   { path: 'secondscreen', component: SecondScreenComponent},
   { path: 'instructions', component: InstructionScreenComponent },
   { path: 'endscreen', component: EndscreenComponent},
+  { path: 'congratulations', component: CongratulationsscreenComponent},
 
   { path: 'reflection_room1', component: ReflectionRoom1Component },
   { path: 'reflection_room2', component: ReflectionRoom2Component },
@@ -176,7 +181,10 @@ const routes: Routes = [
     PhotoelectricRoom5Info1Component,
     PhotoelectricRoom5Info2Component,
     OverallRoom1Info1Component,
-    OverallRoom1Info2Component
+    OverallRoom1Info2Component,
+    TitlescreenComponent,
+    FooterComponent,
+    CongratulationsscreenComponent
   ],
   imports: [
     BrowserModule,
