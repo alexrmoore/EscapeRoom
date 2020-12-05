@@ -21,7 +21,7 @@ export class CompleteRoomComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   public onEndClick(){
-    this.router.navigateByUrl('/endscreen');
+    this.router.navigateByUrl('/congratulations');
   }
 
 }

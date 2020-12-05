@@ -1,0 +1,9 @@
+.footerbackground {
+    position: absolute;
+    left: 0;
+    top: 500px;
+    width: 800px;
+    height: 50px;
+    background: black;
+    z-index: 1;
+}
