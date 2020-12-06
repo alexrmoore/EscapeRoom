@@ -35,6 +35,16 @@
     z-index: 20;
 }
 
+.greystart {
+    position: absolute;
+    background-image: url(../GreyStart_258x60.png);
+    left: 426px;
+    top: 448px;
+    width: 258px;  
+    height: 60px;  
+    z-index: 21;
+}
+
 .instructions-container {
     position: absolute;
     overflow: scroll;

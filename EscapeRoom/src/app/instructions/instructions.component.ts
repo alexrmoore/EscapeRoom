@@ -9,6 +9,7 @@ import { TimersService } from '../timers.service';
   styleUrls: ['./instructions.component.css']
 })
 export class InstructionsComponent implements OnInit {
+  showStart = false;
   startSurveyURL = 'https://docs.google.com/forms/d/e/1FAIpQLScQiXQCsGKx1eoWEpBK8qvIgA3NkivqVyX4whowTCR7MUFBiQ/viewform?usp=pp_url&entry.906372509=';
 
   // tslint:disable-next-line:max-line-length
@@ -23,6 +24,7 @@ export class InstructionsComponent implements OnInit {
   surveyClick(){
     this.startSurveyURL = this.startSurveyURL.concat(this.anonymousCode);
     window.open(this.startSurveyURL, '_blank');
+    setTimeout(() => { this.showStart = true; }, 15000);
   }
 
   // tslint:disable-next-line:typedef
