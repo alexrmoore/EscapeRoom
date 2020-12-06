@@ -15,8 +15,7 @@ export class AppComponent {
 
   constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService){
     this.anonymousIdentifierService.generateUUID();
-    // this.router.navigateByUrl('/title');
-    this.router.navigateByUrl('/startinstructions');
+    this.router.navigateByUrl('/title');
   }
 }
 

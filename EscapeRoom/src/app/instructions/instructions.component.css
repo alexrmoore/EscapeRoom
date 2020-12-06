@@ -53,3 +53,41 @@
 li {
     line-height: 1.5;
   }
+
+.rightimage{
+    float: right;
+    padding: 0 10px 0 0;
+    
+}
+
+.lockimage{
+    float: right;
+    margin-left: 7px;
+    margin-right: 7px;
+    background: url(../lock_image.png);
+    background-size: 72px 100px;
+    border: none;
+    width: 72px;
+    height: 100px;
+}
+
+.trophyimage{
+    float: right;
+    margin-left: 7px;
+    margin-right: 7px;
+    background: url(../trophy_nobackground.png);
+    border: none;
+    width: 70px;
+    height: 100px;
+}
+
+.navigationimage{
+    float: right;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 15px;
+    background: url(../navigationdiagrams.png);
+    border: none;
+    width: 76px;
+    height: 100px;
+}
