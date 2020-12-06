@@ -1,0 +1,55 @@
+.container {
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 550px;
+    background-image: url(../Instructions_800x550.png);
+    border: 0px groove yellow;
+    z-index: 10;
+}
+
+.click-zone {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.click-zone.survey {
+    left: 116px;
+    top: 448px;
+    width: 258px;  
+    height: 60px; 
+    z-index: 20;
+}
+
+.click-zone.start {
+    left: 426px;
+    top: 448px;
+    width: 258px;  
+    height: 60px;  
+    z-index: 20;
+}
+
+.instructions-container {
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 25px;
+    background: #494747;
+    border: solid black 2px;
+    left: 30px;
+    width: 740px;
+    top: 90px;
+    height: 300px;
+    z-index: 15;
+    font-size: 22px;
+}
+
+li {
+    line-height: 1.5;
+  }
