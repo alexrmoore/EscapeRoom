@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
+import { TimersService } from '../timers.service';
 
 @Component({
   selector: 'app-instructions',
@@ -10,7 +11,8 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 export class InstructionsComponent implements OnInit {
   startSurveyURL = 'https://docs.google.com/forms/d/e/1FAIpQLScQiXQCsGKx1eoWEpBK8qvIgA3NkivqVyX4whowTCR7MUFBiQ/viewform?usp=pp_url&entry.906372509=';
 
-  constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService) { }
+  // tslint:disable-next-line:max-line-length
+  constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService, private timersService: TimersService) { }
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
@@ -25,6 +27,7 @@ export class InstructionsComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   startClick(){
+    this.timersService.startOverallTimer();
     this.router.navigateByUrl('/reflection_room1');
   }
 

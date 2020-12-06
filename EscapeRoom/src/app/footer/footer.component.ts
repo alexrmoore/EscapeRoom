@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimersService } from '../timers.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  footerTimerRef;
+  overallTimer: number;
 
-  constructor() { }
+  constructor(private timersService: TimersService) {
+    this.footerTimerRef = setInterval(() => {
+      this.overallTimer = this.timersService.overallStopwatchSeconds;
+    });
+   }
 
   ngOnInit(): void {
   }
