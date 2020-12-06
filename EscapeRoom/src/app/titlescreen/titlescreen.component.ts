@@ -22,7 +22,8 @@ export class TitlescreenComponent implements OnInit {
   startButton() {
     this.router.navigateByUrl('/startinstructions');
     // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
-    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
+    // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
+    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, true, true];
   }
 
 }
