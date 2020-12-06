@@ -8,6 +8,7 @@ export class TimersService {
   overallStopwatchSeconds: number;
   overallTimerRef;
   overallTimerBoolean = false;
+  finalOverallTime: number;
 
   constructor() { }
 

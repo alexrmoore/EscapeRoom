@@ -7,3 +7,24 @@
     background: black;
     z-index: 1;
 }
+
+.timerdisplay {
+    position: absolute;
+    left: 60px;
+    top: 500px;
+    width: 400px;
+    height: 50px;
+    background: none;
+    z-index: 2;
+    font-size: 40px;
+}
+
+.clockicon {
+    position: absolute;
+    background-image: url(../clock_icon.png);
+    left: 10px;
+    top: 502px;
+    width: 39px;
+    height: 39px;
+    z-index: 2;
+}

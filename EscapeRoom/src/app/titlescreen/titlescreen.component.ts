@@ -17,8 +17,8 @@ export class TitlescreenComponent implements OnInit {
   // tslint:disable-next-line:typedef
   startButton() {
     this.router.navigateByUrl('/startinstructions');
-    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
-    // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
+    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
   }
 
 }
