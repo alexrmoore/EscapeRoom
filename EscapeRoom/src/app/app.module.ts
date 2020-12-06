@@ -62,6 +62,7 @@ import { OverallRoom1Info2Component } from './overall-room1-info2/overall-room1-
 import { TitlescreenComponent } from './titlescreen/titlescreen.component';
 import { FooterComponent } from './footer/footer.component';
 import { CongratulationsscreenComponent } from './congratulationsscreen/congratulationsscreen.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 
 
@@ -71,6 +72,7 @@ const routes: Routes = [
   { path: 'title', component: TitlescreenComponent },
   { path: 'secondscreen', component: SecondScreenComponent},
   { path: 'instructions', component: InstructionScreenComponent },
+  { path: 'startinstructions', component: InstructionsComponent},
   { path: 'endscreen', component: EndscreenComponent},
   { path: 'congratulations', component: CongratulationsscreenComponent},
 
@@ -184,7 +186,8 @@ const routes: Routes = [
     OverallRoom1Info2Component,
     TitlescreenComponent,
     FooterComponent,
-    CongratulationsscreenComponent
+    CongratulationsscreenComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
