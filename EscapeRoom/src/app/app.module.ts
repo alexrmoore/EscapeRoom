@@ -6,9 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { LockedRoomsService } from './locked-rooms.service';
-import { EndscreenComponent } from './endscreen/endscreen.component';
 import { ReflectionRoom1Component } from './reflection-room1/reflection-room1.component';
 import { ReflectionRoom2LockedComponent } from './reflection-room2-locked/reflection-room2-locked.component';
 import { ReflectionRoom2Component } from './reflection-room2/reflection-room2.component';
@@ -34,7 +32,6 @@ import { ReflectionRoom3Info1Component } from './reflection-room3-info1/reflecti
 import { ReflectionRoom4Info1Component } from './reflection-room4-info1/reflection-room4-info1.component';
 import { ReflectionRoom3Puzzle1Component } from './reflection-room3-puzzle1/reflection-room3-puzzle1.component';
 import { ReflectionRoom4Puzzle1Component } from './reflection-room4-puzzle1/reflection-room4-puzzle1.component';
-import { TimerComponent } from './timer/timer.component';
 import { InterferenceRoom1Info1Component } from './interference-room1-info1/interference-room1-info1.component';
 import { InterferenceRoom2Info1Component } from './interference-room2-info1/interference-room2-info1.component';
 import { InterferenceRoom3Info1Component } from './interference-room3-info1/interference-room3-info1.component';
@@ -47,12 +44,10 @@ import { PhotoelectricRoom4Info1Component } from './photoelectric-room4-info1/ph
 import { ReflectionRoom2Puzzle1Component } from './reflection-room2-puzzle1/reflection-room2-puzzle1.component';
 import { PhotoelectricRoom3Puzzle1Component } from './photoelectric-room3-puzzle1/photoelectric-room3-puzzle1.component';
 import { InterferenceRoom3Puzzle1Component } from './interference-room3-puzzle1/interference-room3-puzzle1.component';
-import { InstructionScreenComponent } from './instruction-screen/instruction-screen.component';
 import { OverallRoom1Puzzle1Component } from './overall-room1-puzzle1/overall-room1-puzzle1.component';
 import { PhotoelectricRoom4Puzzle1Component } from './photoelectric-room4-puzzle1/photoelectric-room4-puzzle1.component';
 import { InterferenceRoom4Puzzle1Component } from './interference-room4-puzzle1/interference-room4-puzzle1.component';
 import { AnonymousIdentifierService } from './anonymous-identifier.service';
-import { SecondScreenComponent } from './second-screen/second-screen.component';
 import { TimersService } from './timers.service';
 import { PhotoelectricRoom5Component } from './photoelectric-room5/photoelectric-room5.component';
 import { PhotoelectricRoom5Info1Component } from './photoelectric-room5-info1/photoelectric-room5-info1.component';
@@ -68,12 +63,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'title', component: TitlescreenComponent },
-  { path: 'secondscreen', component: SecondScreenComponent},
-  { path: 'instructions', component: InstructionScreenComponent },
   { path: 'startinstructions', component: InstructionsComponent},
-  { path: 'endscreen', component: EndscreenComponent},
   { path: 'congratulations', component: CongratulationsscreenComponent},
 
   { path: 'reflection_room1', component: ReflectionRoom1Component },
@@ -134,8 +125,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    EndscreenComponent,
     ReflectionRoom1Component,
     ReflectionRoom2LockedComponent,
     ReflectionRoom2Component,
@@ -161,7 +150,6 @@ const routes: Routes = [
     ReflectionRoom4Info1Component,
     ReflectionRoom3Puzzle1Component,
     ReflectionRoom4Puzzle1Component,
-    TimerComponent,
     InterferenceRoom1Info1Component,
     InterferenceRoom2Info1Component,
     InterferenceRoom3Info1Component,
@@ -174,11 +162,9 @@ const routes: Routes = [
     ReflectionRoom2Puzzle1Component,
     PhotoelectricRoom3Puzzle1Component,
     InterferenceRoom3Puzzle1Component,
-    InstructionScreenComponent,
     OverallRoom1Puzzle1Component,
     PhotoelectricRoom4Puzzle1Component,
     InterferenceRoom4Puzzle1Component,
-    SecondScreenComponent,
     PhotoelectricRoom5Component,
     PhotoelectricRoom5Info1Component,
     PhotoelectricRoom5Info2Component,
@@ -195,7 +181,7 @@ const routes: Routes = [
     DragDropModule
   ],
   exports: [RouterModule],
-  providers: [LockedRoomsService, AnonymousIdentifierService, TimersService, HomeComponent, TimerComponent],
+  providers: [LockedRoomsService, AnonymousIdentifierService, TimersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
