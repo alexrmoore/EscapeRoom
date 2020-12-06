@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
+import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 
 @Component({
   selector: 'app-titlescreen',
@@ -9,7 +10,10 @@ import { LockedRoomsService } from '../locked-rooms.service';
 })
 export class TitlescreenComponent implements OnInit {
 
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
+  // tslint:disable-next-line:max-line-length
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private anonymousIdentifierService: AnonymousIdentifierService) { }
+
+  anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
   ngOnInit(): void {
   }

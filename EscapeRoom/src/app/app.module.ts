@@ -173,7 +173,7 @@ const routes: Routes = [
     TitlescreenComponent,
     FooterComponent,
     CongratulationsscreenComponent,
-    InstructionsComponent
+    InstructionsComponent,
   ],
   imports: [
     BrowserModule,

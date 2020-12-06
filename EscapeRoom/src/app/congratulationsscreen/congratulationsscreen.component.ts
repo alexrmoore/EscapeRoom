@@ -23,7 +23,7 @@ export class CongratulationsscreenComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onSurveyClick() {
     // tslint:disable-next-line:max-line-length
-    this.endSurveyURL = this.endSurveyURL.concat(this.anonymousCode, '&entry.1216922865=', '0');
+    this.endSurveyURL = this.endSurveyURL.concat(this.anonymousCode, '&entry.1216922865=', this.timeToCompletion.toString());
     window.open(this.endSurveyURL, '_blank');
   }
 
