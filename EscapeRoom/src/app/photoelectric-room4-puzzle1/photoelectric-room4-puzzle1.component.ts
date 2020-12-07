@@ -13,6 +13,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   puzzleWon = !(this.lockedRoomsService.roomLocked[5]);
   startingCoordinates = [[300, 0], [300, 300], [60, 100], [50, 0], [240, 140], [50, 230], [400, 120], [540, 220]];
   currentCoordinates = [[300, 0], [300, 300], [60, 100], [50, 0], [240, 140], [50, 230], [400, 120], [540, 220]];
+  firstFade = true;
 
   // tslint:disable-next-line:max-line-length
   constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
@@ -100,7 +101,10 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 // console.log('Puzzle Complete');
                                 this.lockedRoomsService.roomLocked[5] = false;
                                 this.puzzleWon = true;
-                                photoelectrons.classList.toggle('fade');
+                                if (this.firstFade) {
+                                  photoelectrons.classList.toggle('fade');
+                                  this.firstFade = false;
+                                }
                               }
                             }
                           }
@@ -181,7 +185,10 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 // console.log('Puzzle Complete');
                                 this.lockedRoomsService.roomLocked[5] = false;
                                 this.puzzleWon = true;
-                                photoelectrons.classList.toggle('fade');
+                                if (this.firstFade) {
+                                  photoelectrons.classList.toggle('fade');
+                                  this.firstFade = false;
+                                }
                               }
                             }
                           }
@@ -198,4 +205,3 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
     }
   }
 }
-
