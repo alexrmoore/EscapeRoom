@@ -88,12 +88,27 @@
   position: absolute;
   background-image: url(../electrons.png);
   background-size: 155px 55px;
-  left: 300px;
-  top: 300px;
+  left: 38px; /*300*/
+  top: 27px; /*300*/
   width: 155px;
   height: 55px;
-  cursor: move;
-  z-index: 7;
+  /* cursor: move; */
+  z-index: 2; /* 7 */
+  opacity: 0;
+  transition: opacity 1s; 
+}
+
+.electrons.fade{ /*310x110 - divided by 2*/
+  position: absolute;
+  background-image: url(../electrons.png);
+  background-size: 155px 55px;
+  left: 38px; /*300*/
+  top: 27px; /*300*/
+  width: 155px;
+  height: 55px;
+  /* cursor: move; */
+  z-index: 2; /* 7 */
+  opacity: 1;
 }
 
 .detector{ /* 147x151 - divided by 2*/

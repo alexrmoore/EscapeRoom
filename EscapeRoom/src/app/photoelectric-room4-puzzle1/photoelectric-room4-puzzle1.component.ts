@@ -34,6 +34,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public submitClick(){
+    const photoelectrons = document.getElementById('electrons');
     this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
     // Battery-y - Ammeter-y is between 125px and 145px
     // tslint:disable-next-line:max-line-length
@@ -67,58 +68,39 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                   // tslint:disable-next-line:max-line-length
                   if ((this.currentCoordinates[3][1] - this.currentCoordinates[0][1]) >= 0 && (this.currentCoordinates[3][1] - this.currentCoordinates[0][1]) <= 25) {
                     // console.log('8');
-                    // Electron-x - Detector-x is between 50px and 130px
+                    // Metal-y - Detector-y is less than 25px, and vice-versa
                     // tslint:disable-next-line:max-line-length
-                    if ((this.currentCoordinates[1][0] - this.currentCoordinates[2][0]) >= 50 && (this.currentCoordinates[1][0] - this.currentCoordinates[2][0]) <= 130) {
-                      // console.log('9');
-                      // Electron-x - Vacuum-x is between 0px and 90px
+                    if ((this.currentCoordinates[3][1] - this.currentCoordinates[2][1]) <= 25 && (this.currentCoordinates[2][1] - this.currentCoordinates[3][1]) <= 25) {
+                      // console.log('11');
+                      // Metal-x - Detector-x is between 200px and 280px
                       // tslint:disable-next-line:max-line-length
-                      if ((this.currentCoordinates[1][0] - this.currentCoordinates[0][0]) >= 0 && (this.currentCoordinates[1][0] - this.currentCoordinates[0][0]) <= 90) {
-                        // console.log('10');
-                        // Electron-y - Vacuum-y is between 5px and 45px
+                      if ((this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) >= 200 && (this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) <= 280) {
+                        // console.log('12');
+                        // Wires-y - Metal-y is between 28px and 48px
                         // tslint:disable-next-line:max-line-length
-                        if ((this.currentCoordinates[1][1] - this.currentCoordinates[0][1]) >= 5 && (this.currentCoordinates[1][1] - this.currentCoordinates[0][1]) <= 45) {
-                          // console.log('10');
-                          // Metal-y - Detector-y is less than 25px, and vice-versa
+                        if ((this.currentCoordinates[5][1] - this.currentCoordinates[3][1]) >= 28 && (this.currentCoordinates[5][1] - this.currentCoordinates[3][1]) <= 48) {
+                          // console.log('14');
+                          // Wires-x - Metal-x is between 0px and 95px
                           // tslint:disable-next-line:max-line-length
-                          if ((this.currentCoordinates[3][1] - this.currentCoordinates[2][1]) <= 25 && (this.currentCoordinates[2][1] - this.currentCoordinates[3][1]) <= 25) {
-                            // console.log('11');
-                            // Metal-x - Detector-x is between 200px and 280px
+                          if ((this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) >= 0 && (this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) <= 95) {
+                            // console.log('15');
+                            // Metal-x - Light-x is between 90px and 210px
                             // tslint:disable-next-line:max-line-length
-                            if ((this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) >= 200 && (this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) <= 280) {
-                              // console.log('12');
-                              // Metal-x - Electron-x is between 145px and 230px
-                              // tslint:disable-next-line:max-line-length
-                              if ((this.currentCoordinates[3][0] - this.currentCoordinates[1][0]) >= 145 && (this.currentCoordinates[3][0] - this.currentCoordinates[1][0]) <= 230) {
-                                // console.log('13');
-                                // Wires-y - Metal-y is between 28px and 48px
-                                // tslint:disable-next-line:max-line-length
-                                if ((this.currentCoordinates[5][1] - this.currentCoordinates[3][1]) >= 28 && (this.currentCoordinates[5][1] - this.currentCoordinates[3][1]) <= 48) {
-                                  // console.log('14');
-                                  // Wires-x - Metal-x is between 0px and 95px
-                                  // tslint:disable-next-line:max-line-length
-                                  if ((this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) >= 0 && (this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) <= 95) {
-                                    // console.log('15');
-                                    // Metal-x - Light-x is between 90px and 210px
-                                    // tslint:disable-next-line:max-line-length
-                                    const lightToMetalX = (this.currentCoordinates[3][0] - this.currentCoordinates[4][0]);
-                                    const lightToMetalY = (this.currentCoordinates[3][1] - this.currentCoordinates[4][1]);
-                                    const lighttoMetalUpperY = ((2 / 3) * lightToMetalX) + 20;
-                                    const lighttoMetalLowerY = ((2 / 3) * lightToMetalX) - 60;
-                                    // console.log(lightToMetalX);
-                                    // console.log(lightToMetalY);
-                                    // console.log(lighttoMetalUpperY);
-                                    // console.log(lighttoMetalLowerY);
-                                    if (lightToMetalX >= 90 && lightToMetalX <= 210) {
-                                      // console.log('16');
-                                      if (lightToMetalY >= lighttoMetalLowerY && lightToMetalY <= lighttoMetalUpperY) {
-                                        // console.log('Puzzle Complete');
-                                        this.lockedRoomsService.roomLocked[5] = false;
-                                        this.puzzleWon = true;
-                                      }
-                                    }
-                                  }
-                                }
+                            const lightToMetalX = (this.currentCoordinates[3][0] - this.currentCoordinates[4][0]);
+                            const lightToMetalY = (this.currentCoordinates[3][1] - this.currentCoordinates[4][1]);
+                            const lighttoMetalUpperY = ((2 / 3) * lightToMetalX) + 20;
+                            const lighttoMetalLowerY = ((2 / 3) * lightToMetalX) - 60;
+                            // console.log(lightToMetalX);
+                            // console.log(lightToMetalY);
+                            // console.log(lighttoMetalUpperY);
+                            // console.log(lighttoMetalLowerY);
+                            if (lightToMetalX >= 90 && lightToMetalX <= 210) {
+                              // console.log('16');
+                              if (lightToMetalY >= lighttoMetalLowerY && lightToMetalY <= lighttoMetalUpperY) {
+                                // console.log('Puzzle Complete');
+                                this.lockedRoomsService.roomLocked[5] = false;
+                                this.puzzleWon = true;
+                                photoelectrons.classList.toggle('fade');
                               }
                             }
                           }
@@ -167,58 +149,39 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                   // tslint:disable-next-line:max-line-length
                   if ((this.currentCoordinates[3][1] - this.currentCoordinates[0][1]) >= 0 && (this.currentCoordinates[3][1] - this.currentCoordinates[0][1]) <= 25) {
                     // console.log('8');
-                    // Electron-x - Detector-x is between 50px and 130px
+                    // Metal-y - Detector-y is less than 25px, and vice-versa
                     // tslint:disable-next-line:max-line-length
-                    if ((this.currentCoordinates[1][0] - this.currentCoordinates[2][0]) >= 50 && (this.currentCoordinates[1][0] - this.currentCoordinates[2][0]) <= 130) {
-                      // console.log('9');
-                      // Electron-x - Vacuum-x is between 0px and 90px
+                    if ((this.currentCoordinates[3][1] - this.currentCoordinates[2][1]) <= 25 && (this.currentCoordinates[2][1] - this.currentCoordinates[3][1]) <= 25) {
+                      // console.log('11');
+                      // Metal-x - Detector-x is between 200px and 280px
                       // tslint:disable-next-line:max-line-length
-                      if ((this.currentCoordinates[1][0] - this.currentCoordinates[0][0]) >= 0 && (this.currentCoordinates[1][0] - this.currentCoordinates[0][0]) <= 90) {
-                        // console.log('10');
-                        // Electron-y - Vacuum-y is between 5px and 45px
+                      if ((this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) >= 200 && (this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) <= 280) {
+                        // console.log('12');
+                        // Metal-y - Wires-y is between 123px and 153px
                         // tslint:disable-next-line:max-line-length
-                        if ((this.currentCoordinates[1][1] - this.currentCoordinates[0][1]) >= 5 && (this.currentCoordinates[1][1] - this.currentCoordinates[0][1]) <= 45) {
-                          // console.log('10');
-                          // Metal-y - Detector-y is less than 25px, and vice-versa
+                        if ((this.currentCoordinates[3][1] - this.currentCoordinates[5][1]) >= 123 && (this.currentCoordinates[3][1] - this.currentCoordinates[5][1]) <= 153) {
+                          // console.log('14');
+                          // Wires-x - Metal-x is between 0px and 95px
                           // tslint:disable-next-line:max-line-length
-                          if ((this.currentCoordinates[3][1] - this.currentCoordinates[2][1]) <= 25 && (this.currentCoordinates[2][1] - this.currentCoordinates[3][1]) <= 25) {
-                            // console.log('11');
-                            // Metal-x - Detector-x is between 200px and 280px
+                          if ((this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) >= 0 && (this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) <= 95) {
+                            // console.log('15');
+                            // Metal-x - Light-x is between 90px and 210px
                             // tslint:disable-next-line:max-line-length
-                            if ((this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) >= 200 && (this.currentCoordinates[3][0] - this.currentCoordinates[2][0]) <= 280) {
-                              // console.log('12');
-                              // Metal-x - Electron-x is between 145px and 230px
-                              // tslint:disable-next-line:max-line-length
-                              if ((this.currentCoordinates[3][0] - this.currentCoordinates[1][0]) >= 145 && (this.currentCoordinates[3][0] - this.currentCoordinates[1][0]) <= 230) {
-                                // console.log('13');
-                                // Metal-y - Wires-y is between 123px and 153px
-                                // tslint:disable-next-line:max-line-length
-                                if ((this.currentCoordinates[3][1] - this.currentCoordinates[5][1]) >= 123 && (this.currentCoordinates[3][1] - this.currentCoordinates[5][1]) <= 153) {
-                                  // console.log('14');
-                                  // Wires-x - Metal-x is between 0px and 95px
-                                  // tslint:disable-next-line:max-line-length
-                                  if ((this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) >= 0 && (this.currentCoordinates[5][0] - this.currentCoordinates[3][0]) <= 95) {
-                                    // console.log('15');
-                                    // Metal-x - Light-x is between 90px and 210px
-                                    // tslint:disable-next-line:max-line-length
-                                    const lightToMetalX = (this.currentCoordinates[3][0] - this.currentCoordinates[4][0]);
-                                    const lightToMetalY = (this.currentCoordinates[3][1] - this.currentCoordinates[4][1]);
-                                    const lighttoMetalUpperY = ((2 / 3) * lightToMetalX) + 20;
-                                    const lighttoMetalLowerY = ((2 / 3) * lightToMetalX) - 60;
-                                    // console.log(lightToMetalX);
-                                    // console.log(lightToMetalY);
-                                    // console.log(lighttoMetalUpperY);
-                                    // console.log(lighttoMetalLowerY);
-                                    if (lightToMetalX >= 90 && lightToMetalX <= 210) {
-                                      // console.log('16');
-                                      if (lightToMetalY >= lighttoMetalLowerY && lightToMetalY <= lighttoMetalUpperY) {
-                                        // console.log('Puzzle Complete');
-                                        this.lockedRoomsService.roomLocked[5] = false;
-                                        this.puzzleWon = true;
-                                      }
-                                    }
-                                  }
-                                }
+                            const lightToMetalX = (this.currentCoordinates[3][0] - this.currentCoordinates[4][0]);
+                            const lightToMetalY = (this.currentCoordinates[3][1] - this.currentCoordinates[4][1]);
+                            const lighttoMetalUpperY = ((2 / 3) * lightToMetalX) + 20;
+                            const lighttoMetalLowerY = ((2 / 3) * lightToMetalX) - 60;
+                            // console.log(lightToMetalX);
+                            // console.log(lightToMetalY);
+                            // console.log(lighttoMetalUpperY);
+                            // console.log(lighttoMetalLowerY);
+                            if (lightToMetalX >= 90 && lightToMetalX <= 210) {
+                              // console.log('16');
+                              if (lightToMetalY >= lighttoMetalLowerY && lightToMetalY <= lighttoMetalUpperY) {
+                                // console.log('Puzzle Complete');
+                                this.lockedRoomsService.roomLocked[5] = false;
+                                this.puzzleWon = true;
+                                photoelectrons.classList.toggle('fade');
                               }
                             }
                           }
@@ -235,3 +198,4 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
     }
   }
 }
+
