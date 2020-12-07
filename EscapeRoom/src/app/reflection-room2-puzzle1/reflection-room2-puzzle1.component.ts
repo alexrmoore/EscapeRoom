@@ -31,7 +31,6 @@ export class ReflectionRoom2Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[2] = this.puzzleTrackingService.puzzleAttempts[2] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     const reflectioncheckboxA = document.getElementById('reflectioncheckbox_a') as HTMLInputElement;
     const reflectioncheckboxB = document.getElementById('reflectioncheckbox_b') as HTMLInputElement;
     const reflectioncheckboxC = document.getElementById('reflectioncheckbox_c') as HTMLInputElement;

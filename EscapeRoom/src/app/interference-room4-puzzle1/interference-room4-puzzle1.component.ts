@@ -32,7 +32,6 @@ export class InterferenceRoom4Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[3] = this.puzzleTrackingService.puzzleAttempts[3] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     if (this.waveDragPositionX >= -68 && this.waveDragPositionX <= -38) {
       this.lockedRoomsService.roomLocked[3] = false;
       this.puzzleWon = true;

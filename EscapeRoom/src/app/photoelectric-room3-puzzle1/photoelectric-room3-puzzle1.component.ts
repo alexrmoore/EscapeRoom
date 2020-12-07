@@ -30,7 +30,6 @@ export class PhotoelectricRoom3Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[6] = this.puzzleTrackingService.puzzleAttempts[6] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     const photoelectriccheckboxA = document.getElementById('photoelectriccheckbox_a') as HTMLInputElement;
     const photoelectriccheckboxB = document.getElementById('photoelectriccheckbox_b') as HTMLInputElement;
     const photoelectriccheckboxC = document.getElementById('photoelectriccheckbox_c') as HTMLInputElement;

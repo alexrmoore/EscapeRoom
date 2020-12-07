@@ -4,6 +4,7 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 import { TimersService } from '../timers.service';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
 
+
 @Component({
   selector: 'app-congratulationsscreen',
   templateUrl: './congratulationsscreen.component.html',
@@ -25,7 +26,7 @@ export class CongratulationsscreenComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onSurveyClick() {
     // tslint:disable-next-line:max-line-length
-    this.endSurveyURL = this.endSurveyURL.concat(this.anonymousCode, '&entry.1216922865=', this.timeToCompletion.toString(), '-', this.submitClicks.toString());
+    this.endSurveyURL = this.endSurveyURL.concat(this.anonymousCode, '&entry.1216922865=', this.timeToCompletion.toString(), '-', this.timersService.roomTimes.toString(), '-', this.submitClicks.toString());
     window.open(this.endSurveyURL, '_blank');
   }
 

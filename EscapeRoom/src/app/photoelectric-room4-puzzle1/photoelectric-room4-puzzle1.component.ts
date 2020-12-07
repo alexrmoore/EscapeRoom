@@ -35,7 +35,6 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     // Battery-y - Ammeter-y is between 125px and 145px
     // tslint:disable-next-line:max-line-length
     if ((this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) >= 125 && (this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) <= 145) {

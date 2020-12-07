@@ -28,7 +28,6 @@ export class ReflectionRoom3Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[0] = this.puzzleTrackingService.puzzleAttempts[0] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     const sliderRoom3Puzzle1 = document.getElementById('room3-puzzle1-slider') as HTMLInputElement;
     this.sliderRoom3Puzzle1Value = sliderRoom3Puzzle1.value;
     if (this.sliderRoom3Puzzle1Value === '25'){

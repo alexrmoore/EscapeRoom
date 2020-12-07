@@ -30,7 +30,6 @@ export class OverallRoom1Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     this.puzzleTrackingService.puzzleAttempts[7] = this.puzzleTrackingService.puzzleAttempts[7] + 1;
-    console.log(this.puzzleTrackingService.puzzleAttempts);
     const reflectioncheckboxW = document.getElementById('reflectioncheckbox_wave') as HTMLInputElement;
     const reflectioncheckboxP = document.getElementById('reflectioncheckbox_particle') as HTMLInputElement;
     const interferencecheckboxW = document.getElementById('interferencecheckbox_wave') as HTMLInputElement;
