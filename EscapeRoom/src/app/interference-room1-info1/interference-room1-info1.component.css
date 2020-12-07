@@ -47,6 +47,7 @@
 .interferencediagram{
     position: absolute;
     background-image: url(../interference_diagram_478x120.png);
+    border: 3px black solid;
     left: 150px;
     top: 300px;
     width: 478px;
