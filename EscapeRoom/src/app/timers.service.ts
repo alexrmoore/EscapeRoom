@@ -7,8 +7,9 @@ export class TimersService {
   overallStopwatch: number;
   overallStopwatchSeconds: number;
   overallTimerRef;
-  overallTimerBoolean = false;
   finalOverallTime: number;
+
+  roomTimes = [0, 0, 0, 0];
 
   constructor() { }
 
@@ -23,6 +24,6 @@ export class TimersService {
 
   // tslint:disable-next-line:typedef
   stopOverallTimer() {
-
+    clearInterval(this.overallTimerRef);
   }
 }

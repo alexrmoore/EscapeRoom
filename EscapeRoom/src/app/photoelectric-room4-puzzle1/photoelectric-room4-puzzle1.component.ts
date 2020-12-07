@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { CdkDragEnd } from '@angular/cdk/drag-drop';
+import { PuzzleTrackingService} from '../puzzle-tracking.service';
 
 @Component({
   selector: 'app-photoelectric-room4-puzzle1',
@@ -13,7 +14,8 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   startingCoordinates = [[300, 0], [300, 300], [60, 100], [50, 0], [240, 140], [50, 230], [400, 120], [540, 220]];
   currentCoordinates = [[300, 0], [300, 300], [60, 100], [50, 0], [240, 140], [50, 230], [400, 120], [540, 220]];
 
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService) { }
+  // tslint:disable-next-line:max-line-length
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +34,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public submitClick(){
+    this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
     // Battery-y - Ammeter-y is between 125px and 145px
     // tslint:disable-next-line:max-line-length
     if ((this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) >= 125 && (this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) <= 145) {
