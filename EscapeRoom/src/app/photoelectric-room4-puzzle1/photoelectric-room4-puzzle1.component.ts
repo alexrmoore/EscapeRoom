@@ -36,6 +36,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   // tslint:disable-next-line:typedef
   public submitClick(){
     const photoelectrons = document.getElementById('electrons');
+    const ammeter = document.getElementById('ammeter');
     this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
     // Battery-y - Ammeter-y is between 125px and 145px
     // tslint:disable-next-line:max-line-length
@@ -103,6 +104,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 this.puzzleWon = true;
                                 if (this.firstFade) {
                                   photoelectrons.classList.toggle('fade');
+                                  ammeter.classList.toggle('on');
                                   this.firstFade = false;
                                 }
                               }
@@ -187,6 +189,7 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 this.puzzleWon = true;
                                 if (this.firstFade) {
                                   photoelectrons.classList.toggle('fade');
+                                  ammeter.classList.toggle('on');
                                   this.firstFade = false;
                                 }
                               }
