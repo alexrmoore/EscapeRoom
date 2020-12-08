@@ -11,6 +11,8 @@ export class TimersService {
 
   roomTimes = [0, 0, 0, 0];
 
+  hideTimer = false;
+
   constructor() { }
 
   // tslint:disable-next-line:typedef
