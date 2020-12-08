@@ -173,7 +173,7 @@
 
 .ammeter{ /* 247x360 - divided by 2*/
   position: absolute;
-  background-image: url(../ammeter.png);
+  background-image: url(../ammeter_off.png);
   background-size: 124px 180px;
   left: 540px;
   top: 220px;
@@ -181,6 +181,34 @@
   height: 180px;
   cursor: move;
   z-index: 2;
+  
+}
+
+.ammeter2{ /* 247x360 - divided by 2*/
+  position: absolute;
+  background-image: url(../ammeter_on.png);
+  background-size: 124px 180px;
+  left: 0px;
+  top: 0px;
+  width: 124px;
+  height: 180px;
+  cursor: move;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s; 
+}
+
+.ammeter2.on{ /* 247x360 - divided by 2*/
+  position: absolute;
+  background-image: url(../ammeter_on.png);
+  background-size: 124px 180px;
+  left: 0px;
+  top: 0px;
+  width: 124px;
+  height: 180px;
+  cursor: move;
+  z-index: 2;
+  opacity: 1;
 }
 
 
