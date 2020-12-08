@@ -10,12 +10,14 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 export class FooterComponent implements OnInit {
   footerTimerRef;
   overallTimer: number;
+  hideTimer: boolean;
 
   constructor(private timersService: TimersService, private anonymousIdentifierService: AnonymousIdentifierService) {
     this.footerTimerRef = setInterval(() => {
       this.overallTimer = this.timersService.overallStopwatchSeconds;
+      this.hideTimer = this.timersService.hideTimer;
     });
-   }
+  }
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 

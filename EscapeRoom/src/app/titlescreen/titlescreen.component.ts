@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
+import { TimersService } from '../timers.service';
 
 @Component({
   selector: 'app-titlescreen',
@@ -11,7 +12,7 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 export class TitlescreenComponent implements OnInit {
 
   // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private anonymousIdentifierService: AnonymousIdentifierService) { }
+  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private anonymousIdentifierService: AnonymousIdentifierService, private timersService: TimersService) { }
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
@@ -20,10 +21,12 @@ export class TitlescreenComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   startButton() {
+    const hideTimerButton = document.getElementById('hideTimer') as HTMLInputElement;
     this.router.navigateByUrl('/startinstructions');
     // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
     this.lockedRoomsService.roomLocked = [false, false, false, false, false, true, true, true];
+    this.timersService.hideTimer = !(hideTimerButton.checked);
   }
 
 }
