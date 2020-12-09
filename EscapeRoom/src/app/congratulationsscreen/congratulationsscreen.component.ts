@@ -18,6 +18,7 @@ export class CongratulationsscreenComponent implements OnInit {
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
   timeToCompletion = this.timersService.finalOverallTime;
+  timeString = this.timersService.finalTimeString;
   submitClicks = this.puzzleTrackingService.puzzleAttempts;
 
   ngOnInit(): void {
