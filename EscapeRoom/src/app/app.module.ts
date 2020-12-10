@@ -58,6 +58,8 @@ import { TitlescreenComponent } from './titlescreen/titlescreen.component';
 import { FooterComponent } from './footer/footer.component';
 import { CongratulationsscreenComponent } from './congratulationsscreen/congratulationsscreen.component';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { InGameInstructionsComponent } from './in-game-instructions/in-game-instructions.component';
+import { PreSurveyComponent } from './pre-survey/pre-survey.component';
 
 
 
@@ -65,6 +67,7 @@ import { InstructionsComponent } from './instructions/instructions.component';
 const routes: Routes = [
   { path: 'title', component: TitlescreenComponent },
   { path: 'startinstructions', component: InstructionsComponent},
+  { path: 'instructions', component: InGameInstructionsComponent},
   { path: 'congratulations', component: CongratulationsscreenComponent},
 
   { path: 'reflection_room1', component: ReflectionRoom1Component },
@@ -119,7 +122,9 @@ const routes: Routes = [
 
   { path: 'overall_room1_puzzle1', component: OverallRoom1Puzzle1Component},
 
-  { path: 'complete_room', component: CompleteRoomComponent}
+  { path: 'complete_room', component: CompleteRoomComponent},
+
+  { path: 'presurvey', component: PreSurveyComponent}
 ];
 
 @NgModule({
@@ -174,6 +179,8 @@ const routes: Routes = [
     FooterComponent,
     CongratulationsscreenComponent,
     InstructionsComponent,
+    InGameInstructionsComponent,
+    PreSurveyComponent
   ],
   imports: [
     BrowserModule,

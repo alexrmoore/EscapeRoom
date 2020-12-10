@@ -50,7 +50,6 @@ export class TimersService {
 
       timerString = timerString + this.currentSecs.toString() + 's ';
 
-      console.log(timerString);
       this.finalTimeString = timerString;
     });
   }
