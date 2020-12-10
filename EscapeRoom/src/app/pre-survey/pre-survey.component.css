@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    z-index: 11;
+}
+
+.video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 550px;
+    background: #292525;
+}

@@ -122,7 +122,9 @@ const routes: Routes = [
 
   { path: 'overall_room1_puzzle1', component: OverallRoom1Puzzle1Component},
 
-  { path: 'complete_room', component: CompleteRoomComponent}
+  { path: 'complete_room', component: CompleteRoomComponent},
+
+  { path: 'presurvey', component: PreSurveyComponent}
 ];
 
 @NgModule({
