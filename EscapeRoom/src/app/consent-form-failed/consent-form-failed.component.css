@@ -1,0 +1,39 @@
+.container {
+    position: absolute;
+    z-index: 11;
+}
+
+.video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 550px;
+    background: #292525;
+}
+
+.textbox {
+    position: absolute;
+    left: 100px;
+    top: 130px;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.returnbutton {
+    position: absolute;
+    left: 300px;
+    top: 340px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.continuebutton {
+    position: absolute;
+    left: 260px;
+    top: 420px;
+    width: 280px;
+    font-size: 20px;
+}

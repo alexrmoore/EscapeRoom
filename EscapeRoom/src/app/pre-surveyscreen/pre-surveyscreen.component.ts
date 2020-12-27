@@ -32,7 +32,7 @@ export class PreSurveyscreenComponent implements OnInit {
     newWidget.style.width = '800px';
     newWidget.style.height = '550px';
     container.insertBefore(newWidget, widgetNode);
-    setTimeout(() => { this.hideButton = false; }, 800);
+    setTimeout(() => { this.hideButton = false; }, 5000);
   }
 
   instructionsNavigation(): void {
