@@ -59,7 +59,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CongratulationsscreenComponent } from './congratulationsscreen/congratulationsscreen.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { InGameInstructionsComponent } from './in-game-instructions/in-game-instructions.component';
-import { PreSurveyComponent } from './pre-survey/pre-survey.component';
+import { PreSurveyscreenComponent } from './pre-surveyscreen/pre-surveyscreen.component';
+import { PostSurveyscreenComponent } from './post-surveyscreen/post-surveyscreen.component';
 
 
 
@@ -124,7 +125,7 @@ const routes: Routes = [
 
   { path: 'complete_room', component: CompleteRoomComponent},
 
-  { path: 'presurvey', component: PreSurveyComponent}
+  { path: 'presurvey', component: PreSurveyscreenComponent}
 ];
 
 @NgModule({
@@ -180,7 +181,8 @@ const routes: Routes = [
     CongratulationsscreenComponent,
     InstructionsComponent,
     InGameInstructionsComponent,
-    PreSurveyComponent
+    PreSurveyscreenComponent,
+    PostSurveyscreenComponent,
   ],
   imports: [
     BrowserModule,

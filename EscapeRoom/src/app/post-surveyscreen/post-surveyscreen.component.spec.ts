@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreSurveyComponent } from './pre-survey.component';
+import { PostSurveyscreenComponent } from './post-surveyscreen.component';
 
-describe('PreSurveyComponent', () => {
-  let component: PreSurveyComponent;
-  let fixture: ComponentFixture<PreSurveyComponent>;
+describe('PostSurveyscreenComponent', () => {
+  let component: PostSurveyscreenComponent;
+  let fixture: ComponentFixture<PostSurveyscreenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PreSurveyComponent ]
+      declarations: [ PostSurveyscreenComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PreSurveyComponent);
+    fixture = TestBed.createComponent(PostSurveyscreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
