@@ -3,6 +3,7 @@ import { NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { TimersService } from '../timers.service';
+import {RecentUrlService} from '../recent-url.service';
 
 @Component({
   selector: 'app-giveup-modal',
@@ -14,7 +15,8 @@ export class GiveupModalComponent {
   constructor(public activeModal: NgbActiveModal,
               private router: Router,
               private lockedRoomsService: LockedRoomsService,
-              private timersService: TimersService) { }
+              private timersService: TimersService,
+              private recentUrl: RecentUrlService) { }
 
   close(): void {
     this.activeModal.close();
@@ -22,7 +24,8 @@ export class GiveupModalComponent {
 
   giveUp(): void {
     this.activeModal.close();
-    this.router.navigateByUrl('/congratulations');
+    this.recentUrl.giveUpUrl = this.router.url;
+    this.router.navigateByUrl('/givenup');
     this.timersService.finalOverallTime = this.timersService.overallStopwatchSeconds;
     this.timersService.stopOverallTimer();
   }

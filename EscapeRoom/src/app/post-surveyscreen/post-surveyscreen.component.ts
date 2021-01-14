@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 import { TimersService } from '../timers.service';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
+import {RecentUrlService} from '../recent-url.service';
 
 @Component({
   selector: 'app-post-surveyscreen',
@@ -16,7 +17,8 @@ export class PostSurveyscreenComponent implements OnInit {
   constructor(private router: Router,
               private anonymousIdentifierService: AnonymousIdentifierService,
               private timersService: TimersService,
-              private puzzleTrackingService: PuzzleTrackingService) {
+              private puzzleTrackingService: PuzzleTrackingService,
+              private recentUrl: RecentUrlService) {
                 this.PostSurveyUrl = this.PostSurveyUrl.concat(anonymousIdentifierService.anonymousCode);
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&timetocomplete=', this.timeToCompletion.toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&reflectiontime=', this.timersService.roomTimes[0].toString());
@@ -31,6 +33,7 @@ export class PostSurveyscreenComponent implements OnInit {
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_photoelectric1=', this.submitClicks[5].toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_photoelectric2=', this.submitClicks[6].toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_overall1=', this.submitClicks[7].toString());
+                this.PostSurveyUrl = this.PostSurveyUrl.concat('&giveup_url=', this.recentUrl.giveUpUrl);
   }
 
   timeToCompletion = this.timersService.finalOverallTime;
