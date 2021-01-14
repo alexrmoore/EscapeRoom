@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~10.1.0",
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
+    "@ng-bootstrap/ng-bootstrap": "^9.0.0",
     "@typeform/embed": "^0.31.1",
     "angular2-uuid": "^1.1.1",
     "document-register-element": "^1.7.2",

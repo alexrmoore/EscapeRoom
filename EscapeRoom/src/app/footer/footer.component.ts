@@ -3,6 +3,9 @@ import { TimersService } from '../timers.service';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {GiveupModalComponent} from '../giveup-modal/giveup-modal.component';
+
 
 
 @Component({
@@ -16,7 +19,11 @@ export class FooterComponent implements OnInit {
   hideTimer: boolean;
 
   // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private timersService: TimersService, private anonymousIdentifierService: AnonymousIdentifierService, private lockedRoomsService: LockedRoomsService) {
+  constructor(private router: Router,
+              private timersService: TimersService,
+              private anonymousIdentifierService: AnonymousIdentifierService,
+              private lockedRoomsService: LockedRoomsService,
+              private modalService: NgbModal) {
     this.footerTimerRef = setInterval(() => {
       this.overallTimer = this.timersService.finalTimeString;
       this.hideTimer = this.timersService.hideTimer;
@@ -40,8 +47,8 @@ export class FooterComponent implements OnInit {
   }
 
   onGiveUpClick(): void{
-    console.log('Give Up Button Clicked!');
+    const modalRef = this.modalService.open(GiveupModalComponent);
+    modalRef.componentInstance.name = 'World';
+    }
   }
 
-
-}
