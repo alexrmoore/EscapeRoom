@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
+declare var require: any;
+const FileSaver = require('file-saver');
+
 @Component({
   selector: 'app-consent-form',
   templateUrl: './consent-form.component.html',
   styleUrls: ['./consent-form.component.css']
 })
-export class ConsentFormComponent implements OnInit {
+export class ConsentFormComponent {
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
   informationClick(): void {
-    window.open('https://drive.google.com/file/d/1yxbr32XD7XPJb-nSw4NsR7y246uSEQTq/view?usp=sharing', '_blank');
+    const pdfUrl = '../assets/InfoSheet.pdf';
+    const pdfName = 'Participant Information Sheet - 02.12.20.pdf';
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
   submitClick(): void {
