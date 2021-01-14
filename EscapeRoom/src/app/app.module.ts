@@ -64,6 +64,7 @@ import { PostSurveyscreenComponent } from './post-surveyscreen/post-surveyscreen
 import { ConsentFormComponent } from './consent-form/consent-form.component';
 import { ConsentFormFailedComponent } from './consent-form-failed/consent-form-failed.component';
 import { ConsentService } from './consent.service';
+import { GiveupModalComponent } from './giveup-modal/giveup-modal.component';
 
 
 
@@ -191,6 +192,7 @@ const routes: Routes = [
     PostSurveyscreenComponent,
     ConsentFormComponent,
     ConsentFormFailedComponent,
+    GiveupModalComponent
   ],
   imports: [
     BrowserModule,
@@ -199,6 +201,7 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [LockedRoomsService, AnonymousIdentifierService, TimersService, ConsentService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [GiveupModalComponent]
 })
 export class AppModule { }
