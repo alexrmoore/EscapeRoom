@@ -1,0 +1,77 @@
+.container {
+    position: absolute;
+}
+
+.blurredbackground {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 550px;
+    background: grey;
+    opacity: 0.6;
+    z-index: 11;
+}
+
+.modalbox {    
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 760px;  
+    height: 470px;
+    z-index: 11;
+    background-color: #fbe99e;
+    border: black solid 6px;
+    border-radius: 15px; 
+}
+
+.closebutton {
+    cursor: pointer;
+    position: absolute;
+    left: 150px;
+    top: 420px;
+    width: 200px;  
+    height: 60px;
+    z-index: 12;
+    background: #3eb471;
+    border: black solid 6px;
+    border-radius: 15px;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    font-weight: bold;
+}
+
+.newhintbutton {
+    cursor: pointer;
+    position: absolute;
+    left: 450px;
+    top: 420px;
+    width: 200px;  
+    height: 60px;
+    z-index: 12;
+    background: #3eb471;
+    border: black solid 6px;
+    border-radius: 15px;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    font-weight: bold;
+}
+
+.hinttext {
+    position: absolute;
+    left: 150px;
+    top: 160px;
+    width: 500px;  
+    height: 100px;
+    z-index: 12;
+    overflow-wrap: normal;
+    font-weight: bolder;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+}
