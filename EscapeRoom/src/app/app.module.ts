@@ -66,6 +66,7 @@ import { ConsentFormFailedComponent } from './consent-form-failed/consent-form-f
 import { ConsentService } from './consent.service';
 import { GiveupModalComponent } from './giveup-modal/giveup-modal.component';
 import { GameoverScreenComponent } from './gameover-screen/gameover-screen.component';
+import { HintModalComponent } from './hint-modal/hint-modal.component';
 
 
 
@@ -195,7 +196,8 @@ const routes: Routes = [
     ConsentFormComponent,
     ConsentFormFailedComponent,
     GiveupModalComponent,
-    GameoverScreenComponent
+    GameoverScreenComponent,
+    HintModalComponent
   ],
   imports: [
     BrowserModule,

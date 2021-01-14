@@ -3,8 +3,9 @@ import { TimersService } from '../timers.service';
 import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {GiveupModalComponent} from '../giveup-modal/giveup-modal.component';
+import {HintModalComponent} from '../hint-modal/hint-modal.component';
 
 
 
@@ -13,7 +14,7 @@ import {GiveupModalComponent} from '../giveup-modal/giveup-modal.component';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   footerTimerRef;
   overallTimer: string;
   hideTimer: boolean;
@@ -32,9 +33,6 @@ export class FooterComponent implements OnInit {
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
-  ngOnInit(): void {
-  }
-
   onInstructionsClick(): void{
     this.router.navigateByUrl('/instructions');
     this.timersService.currentPauseTime = this.timersService.overallStopwatch;
@@ -44,11 +42,12 @@ export class FooterComponent implements OnInit {
   onHintClick(): void{
     console.log('Hint Button Clicked!');
     console.log(this.lockedRoomsService.roomLocked);
+    const modalRefHint = this.modalService.open(HintModalComponent);
   }
 
   onGiveUpClick(): void{
-    const modalRef = this.modalService.open(GiveupModalComponent);
-    modalRef.componentInstance.name = 'World';
+    const modalRefGiveUp = this.modalService.open(GiveupModalComponent);
+    modalRefGiveUp.componentInstance.name = 'World';
     }
   }
 

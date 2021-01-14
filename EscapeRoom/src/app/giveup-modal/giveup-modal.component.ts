@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
-import { LockedRoomsService } from '../locked-rooms.service';
 import { TimersService } from '../timers.service';
 import {RecentUrlService} from '../recent-url.service';
 
@@ -14,7 +13,6 @@ export class GiveupModalComponent {
 
   constructor(public activeModal: NgbActiveModal,
               private router: Router,
-              private lockedRoomsService: LockedRoomsService,
               private timersService: TimersService,
               private recentUrl: RecentUrlService) { }
 
