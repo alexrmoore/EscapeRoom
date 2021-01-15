@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { CdkDragEnd } from '@angular/cdk/drag-drop';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
+import { HintSelectionService} from '../hint-selection.service';
 
 @Component({
   selector: 'app-photoelectric-room4-puzzle1',
@@ -15,8 +16,10 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   currentCoordinates = [[300, 0], [300, 300], [60, 100], [50, 0], [240, 140], [50, 230], [400, 120], [540, 220]];
   firstFade = true;
 
-  // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
+  constructor(private router: Router,
+              private lockedRoomsService: LockedRoomsService,
+              private puzzleTrackingService: PuzzleTrackingService,
+              private hintSelection: HintSelectionService) { }
 
   ngOnInit(): void {
   }
@@ -102,6 +105,8 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 // console.log('Puzzle Complete');
                                 this.lockedRoomsService.roomLocked[5] = false;
                                 this.puzzleWon = true;
+                                this.hintSelection.hintCounter = 0;
+                                this.hintSelection.hintText = 'Click "New Hint" to get a hint';
                                 if (this.firstFade) {
                                   photoelectrons.classList.toggle('fade');
                                   ammeter.classList.toggle('on');

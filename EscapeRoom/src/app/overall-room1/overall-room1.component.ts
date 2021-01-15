@@ -11,7 +11,9 @@ import { TimersService } from '../timers.service';
 })
 export class OverallRoom1Component implements OnInit {
 
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private timersService: TimersService) {}
+  constructor(private router: Router,
+              private lockedRoomsService: LockedRoomsService,
+              private timersService: TimersService) {}
 
   ngOnInit(): void {
   }

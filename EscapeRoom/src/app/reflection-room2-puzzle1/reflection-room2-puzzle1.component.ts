@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
+import { HintSelectionService} from '../hint-selection.service';
 
 @Component({
   selector: 'app-reflection-room2-puzzle1',
@@ -12,8 +13,10 @@ export class ReflectionRoom2Puzzle1Component implements OnInit {
 
   puzzleWon = !(this.lockedRoomsService.roomLocked[2]);
 
-  // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
+  constructor(private router: Router,
+              private lockedRoomsService: LockedRoomsService,
+              private puzzleTrackingService: PuzzleTrackingService,
+              private hintSelection: HintSelectionService) { }
 
   ngOnInit(): void {
   }
@@ -39,6 +42,8 @@ export class ReflectionRoom2Puzzle1Component implements OnInit {
     if (reflectioncheckboxB.checked && reflectioncheckboxD.checked && !reflectioncheckboxA.checked && !reflectioncheckboxC.checked) {
       this.lockedRoomsService.roomLocked[2] = false;
       this.puzzleWon = true;
+      this.hintSelection.hintCounter = 0;
+      this.hintSelection.hintText = 'Click "New Hint" to get a hint';
     }
   }
 

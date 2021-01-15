@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
+import { HintSelectionService} from '../hint-selection.service';
 
 @Component({
   selector: 'app-interference-room3-puzzle1',
@@ -11,8 +12,11 @@ import { PuzzleTrackingService} from '../puzzle-tracking.service';
 export class InterferenceRoom3Puzzle1Component implements OnInit {
   puzzleWon = !(this.lockedRoomsService.roomLocked[4]);
 
-  // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
+
+  constructor(private router: Router,
+              private lockedRoomsService: LockedRoomsService,
+              private puzzleTrackingService: PuzzleTrackingService,
+              private hintSelection: HintSelectionService) { }
 
   ngOnInit(): void {
   }
@@ -39,6 +43,8 @@ export class InterferenceRoom3Puzzle1Component implements OnInit {
     if (interferencecheckboxA.checked && !interferencecheckboxB.checked && !interferencecheckboxC.checked && interferencecheckboxD.checked && !interferencecheckboxE.checked) {
       this.lockedRoomsService.roomLocked[4] = false;
       this.puzzleWon = true;
+      this.hintSelection.hintCounter = 0;
+      this.hintSelection.hintText = 'Click "New Hint" to get a hint';
     }
   }
 }
