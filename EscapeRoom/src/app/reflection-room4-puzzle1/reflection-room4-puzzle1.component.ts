@@ -38,7 +38,8 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
       this.puzzleWon = true;
       if (!this.lockedRoomsService.roomLocked[0] && !this.lockedRoomsService.roomLocked[1]) {
         this.hintSelection.hintCounter = 0;
-        this.hintSelection.hintText = 'Click "New Hint" to get a hint';
+        this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
+        this.hintSelection.hideNewHintButton = false;
       }
     }
   }

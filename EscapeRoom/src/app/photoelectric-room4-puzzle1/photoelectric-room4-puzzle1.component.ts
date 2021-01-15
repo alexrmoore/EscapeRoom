@@ -106,7 +106,8 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
                                 this.lockedRoomsService.roomLocked[5] = false;
                                 this.puzzleWon = true;
                                 this.hintSelection.hintCounter = 0;
-                                this.hintSelection.hintText = 'Click "New Hint" to get a hint';
+                                this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
+                                this.hintSelection.hideNewHintButton = false;
                                 if (this.firstFade) {
                                   photoelectrons.classList.toggle('fade');
                                   ammeter.classList.toggle('on');

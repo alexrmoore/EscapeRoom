@@ -40,8 +40,6 @@ export class FooterComponent {
   }
 
   onHintClick(): void{
-    console.log('Hint Button Clicked!');
-    console.log(this.lockedRoomsService.roomLocked);
     const modalRefHint = this.modalService.open(HintModalComponent);
   }
 
