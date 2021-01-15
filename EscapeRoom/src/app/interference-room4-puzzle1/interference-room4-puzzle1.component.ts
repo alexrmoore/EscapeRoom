@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { LockedRoomsService } from '../locked-rooms.service';
 import { CdkDragEnd } from '@angular/cdk/drag-drop';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
+import { HintSelectionService} from '../hint-selection.service';
 
 @Component({
   selector: 'app-interference-room4-puzzle1',
@@ -13,8 +14,11 @@ export class InterferenceRoom4Puzzle1Component implements OnInit {
   puzzleWon = !(this.lockedRoomsService.roomLocked[3]);
   waveDragPositionX = 0;
 
-  // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private lockedRoomsService: LockedRoomsService, private puzzleTrackingService: PuzzleTrackingService) { }
+
+  constructor(private router: Router,
+              private lockedRoomsService: LockedRoomsService,
+              private puzzleTrackingService: PuzzleTrackingService,
+              private hintSelection: HintSelectionService) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +39,8 @@ export class InterferenceRoom4Puzzle1Component implements OnInit {
     if (this.waveDragPositionX >= -68 && this.waveDragPositionX <= -38) {
       this.lockedRoomsService.roomLocked[3] = false;
       this.puzzleWon = true;
+      this.hintSelection.hintCounter = 0;
+      this.hintSelection.hintText = 'Click "New Hint" to get a hint';
     }
   }
 

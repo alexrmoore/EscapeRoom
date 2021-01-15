@@ -10,7 +10,7 @@
     height: 550px;
     background: grey;
     opacity: 0.6;
-    z-index: 11;
+    z-index: 21;
 }
 
 .modalbox {    
@@ -19,7 +19,7 @@
     top: 10px;
     width: 760px;  
     height: 470px;
-    z-index: 11;
+    z-index: 21;
     background-color: #fbe99e;
     border: black solid 6px;
     border-radius: 15px; 
@@ -32,7 +32,7 @@
     top: 420px;
     width: 200px;  
     height: 60px;
-    z-index: 12;
+    z-index: 22;
     background: #3eb471;
     border: black solid 6px;
     border-radius: 15px;
@@ -50,7 +50,7 @@
     top: 420px;
     width: 200px;  
     height: 60px;
-    z-index: 12;
+    z-index: 22;
     background: #3eb471;
     border: black solid 6px;
     border-radius: 15px;
@@ -67,7 +67,7 @@
     top: 160px;
     width: 500px;  
     height: 100px;
-    z-index: 12;
+    z-index: 22;
     overflow-wrap: normal;
     font-weight: bolder;
     user-select:none;
