@@ -40,7 +40,8 @@ export class InterferenceRoom4Puzzle1Component implements OnInit {
       this.lockedRoomsService.roomLocked[3] = false;
       this.puzzleWon = true;
       this.hintSelection.hintCounter = 0;
-      this.hintSelection.hintText = 'Click "New Hint" to get a hint';
+      this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
+      this.hintSelection.hideNewHintButton = false;
     }
   }
 

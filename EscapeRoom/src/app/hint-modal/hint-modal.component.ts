@@ -8,13 +8,31 @@ import { HintSelectionService} from '../hint-selection.service';
   styleUrls: ['./hint-modal.component.css']
 })
 export class HintModalComponent implements OnInit{
-  hintText = 'Click "New Hint" to get a hint';
+  hintText = 'Click\n"New Hint"\nto get a hint';
+  hideNewHint: boolean;
+  hideHintTimer = false;
+  booleanRefreshRef;
+  showTooltip = false;
+  timerValue = 5;
+  hintResest = 5;
+  countdownTimer = 5;
 
   constructor(public activeModal: NgbActiveModal,
               private hintSelection: HintSelectionService) { }
 
+
   ngOnInit(): void {
     this.refreshText();
+    this.hideNewHint = this.hintSelection.hideNewHintButton;
+    this.booleanRefreshRef = setInterval(() => {
+      this.hideHintTimer = this.hintSelection.buttonHideTimer;
+      if (this.hideHintTimer === false) {
+        clearInterval(this.booleanRefreshRef);
+      }
+      this.timerValue = this.hintSelection.hintStopwatch / 1000;
+      this.countdownTimer = this.hintResest - this.timerValue;
+      this.countdownTimer = Math.ceil(this.countdownTimer);
+    });
   }
 
   close(): void {
@@ -22,8 +40,20 @@ export class HintModalComponent implements OnInit{
   }
 
   newHint(): void {
+    this.hideHintTimer = true;
     this.hintSelection.HintPicker();
     this.hintText = this.hintSelection.hintText;
+    this.hideNewHint = this.hintSelection.hideNewHintButton;
+    this.hintSelection.startHintTimer(5000);
+    this.booleanRefreshRef = setInterval(() => {
+      this.hideHintTimer = this.hintSelection.buttonHideTimer;
+      if (this.hideHintTimer === false) {
+        clearInterval(this.booleanRefreshRef);
+      }
+      this.timerValue = this.hintSelection.hintStopwatch / 1000;
+      this.countdownTimer = this.hintResest - this.timerValue;
+      this.countdownTimer = Math.ceil(this.countdownTimer);
+    });
   }
 
   refreshText(): void {

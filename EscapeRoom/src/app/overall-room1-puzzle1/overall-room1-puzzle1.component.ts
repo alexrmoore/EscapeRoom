@@ -47,7 +47,8 @@ export class OverallRoom1Puzzle1Component implements OnInit {
           this.lockedRoomsService.roomLocked[7] = false;
           this.puzzleWon = true;
           this.hintSelection.hintCounter = 0;
-          this.hintSelection.hintText = 'You\'ve Completed the Escape Room!';
+          this.hintSelection.hintText = 'You\'ve completed the Escape Room!';
+          this.hintSelection.hideNewHintButton = true;
         }
       }
     }

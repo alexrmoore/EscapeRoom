@@ -5,14 +5,18 @@ import { LockedRoomsService } from './locked-rooms.service';
   providedIn: 'root'
 })
 export class HintSelectionService {
-  hintText = 'Click "New Hint" to get a hint';
+  hintText = 'Click\n"New Hint"\nto get a hint';
   hintCounter = 0;
   allowHint = true;
+  hideNewHintButton = false;
+  buttonHideTimer = false;
+  hintTimerRef;
+  hintStopwatch: number;
 
   reflection1Hints = ['Try applying the law of reflection!',
-  'Law of reflection: Angle of incidence = Angle of reflection',
-  'Alternate Angles (aka. Z-Angles) are equal!'];
-  reflection2Hints = ['Remember the Law of Reflection: Angle of Incidence = Angle of Reflection',
+  'Law of reflection:\nAngle of incidence = Angle of reflection',
+  'Alternate Angles\n(aka. Z-Angles)\nare equal!'];
+  reflection2Hints = ['Remember The Law of Reflection: Angle of Incidence = Angle of Reflection',
   'Remember that both waves and particles exhibit reflection!',
   'Remember that light also exhibits reflection!'];
   interference1Hints = ['Align the second waveform so that it will superpose with the first waveform to produce the third waveform.',
@@ -40,12 +44,12 @@ export class HintSelectionService {
   }
   else {
     this.allowHint = false;
-    this.hintText = 'No more hints available!';
+    this.hintText = 'No more hints\navailable!';
+    this.hideNewHintButton = true;
   }}
 
 
   HintPicker(): void {
-    console.log(this.hintCounter);
     if (this.lockedRoomsService.roomLocked[0] || this.lockedRoomsService.roomLocked[1]) {
       this.HintCounter();
       if (this.allowHint){
@@ -82,7 +86,20 @@ export class HintSelectionService {
         this.hintText = this.overallHints[this.hintCounter - 1];
       }
     } else {
-      this.hintText = 'You\'ve completed the Escape Room';
+      this.hintText = 'You\'ve completed the Escape Room!';
     }
+  }
+
+  startHintTimer(timeInput): void{
+    this.buttonHideTimer = true;
+    const hintStartTime = Date.now() - (this.hintStopwatch || 0);
+    this.hintTimerRef = setInterval(() => {
+      this.hintStopwatch = (Date.now() - hintStartTime);
+      if (this.hintStopwatch > timeInput) {
+        clearInterval(this.hintTimerRef);
+        this.buttonHideTimer = false;
+        this.hintStopwatch = 0;
+      }
+    });
   }
 }
