@@ -13,6 +13,8 @@ export class HintSelectionService {
   hintTimerRef;
   hintStopwatch: number;
 
+  totalHintCount = 0;
+
   reflection1Hints = ['Try applying the law of reflection!',
   'Law of reflection:\nAngle of incidence = Angle of reflection',
   'Alternate Angles\n(aka. Z-Angles)\nare equal!'];
@@ -41,6 +43,7 @@ export class HintSelectionService {
   if (this.hintCounter < 3) {
     this.allowHint = true;
     this.hintCounter += 1;
+    this.totalHintCount += 1;
   }
   else {
     this.allowHint = false;
