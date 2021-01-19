@@ -22,7 +22,8 @@ export class TitlescreenComponent implements OnInit {
   startButton() {
     const hideTimerButton = document.getElementById('hideTimer') as HTMLInputElement;
 
-    this.router.navigateByUrl('/consent_form');
+    // this.router.navigateByUrl('/consent_form');
+    this.router.navigateByUrl('/info-screen');
 
     this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];

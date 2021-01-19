@@ -13,9 +13,9 @@ export class HintModalComponent implements OnInit{
   hideHintTimer = false;
   booleanRefreshRef;
   showTooltip = false;
-  timerValue = 5;
-  hintResest = 5;
-  countdownTimer = 5;
+  timerValue = 3;
+  hintResest = 3;
+  countdownTimer = 3;
 
   constructor(public activeModal: NgbActiveModal,
               private hintSelection: HintSelectionService) { }
@@ -44,7 +44,7 @@ export class HintModalComponent implements OnInit{
     this.hintSelection.HintPicker();
     this.hintText = this.hintSelection.hintText;
     this.hideNewHint = this.hintSelection.hideNewHintButton;
-    this.hintSelection.startHintTimer(5000);
+    this.hintSelection.startHintTimer(3000);
     this.booleanRefreshRef = setInterval(() => {
       this.hideHintTimer = this.hintSelection.buttonHideTimer;
       if (this.hideHintTimer === false) {

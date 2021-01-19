@@ -1,0 +1,55 @@
+.container {
+    position: absolute;
+    z-index: 11;
+}
+
+.video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 550px;
+    background: #292525;
+}
+
+.titletextbox {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.continuebutton{
+    position: absolute;
+    left: 300px;
+    height: 30px;
+    top: 450px;
+    width: 200px;
+    font-size: 18px;
+}
+
+.textbox {
+    position: absolute;
+    left: 100px;
+    top: 140px;
+    width: 600px;
+    height: 200px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.unilogo { /* 1411x832 */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-image: url('../du_logo.png');
+    background-size: 141px 83px;
+    width: 141px;
+    height: 83px;
+    z-index: 12;
+}
