@@ -5,6 +5,7 @@ import { AnonymousIdentifierService } from '../anonymous-identifier.service';
 import { TimersService } from '../timers.service';
 import { PuzzleTrackingService} from '../puzzle-tracking.service';
 import {RecentUrlService} from '../recent-url.service';
+import { HintSelectionService} from '../hint-selection.service';
 
 @Component({
   selector: 'app-post-surveyscreen',
@@ -18,7 +19,8 @@ export class PostSurveyscreenComponent implements OnInit {
               private anonymousIdentifierService: AnonymousIdentifierService,
               private timersService: TimersService,
               private puzzleTrackingService: PuzzleTrackingService,
-              private recentUrl: RecentUrlService) {
+              private recentUrl: RecentUrlService,
+              private hintSelection: HintSelectionService) {
                 this.PostSurveyUrl = this.PostSurveyUrl.concat(anonymousIdentifierService.anonymousCode);
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&timetocomplete=', this.timeToCompletion.toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&reflectiontime=', this.timersService.roomTimes[0].toString());
@@ -34,6 +36,7 @@ export class PostSurveyscreenComponent implements OnInit {
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_photoelectric2=', this.submitClicks[6].toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_overall1=', this.submitClicks[7].toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&giveup_url=', this.recentUrl.giveUpUrl);
+                this.PostSurveyUrl = this.PostSurveyUrl.concat('&hint_count=', this.hintSelection.totalHintCount.toString());
   }
 
   timeToCompletion = this.timersService.finalOverallTime;
