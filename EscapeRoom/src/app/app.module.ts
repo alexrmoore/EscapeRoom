@@ -67,6 +67,7 @@ import { ConsentService } from './consent.service';
 import { GiveupModalComponent } from './giveup-modal/giveup-modal.component';
 import { GameoverScreenComponent } from './gameover-screen/gameover-screen.component';
 import { HintModalComponent } from './hint-modal/hint-modal.component';
+import { InfoScreenComponent } from './info-screen/info-screen.component';
 
 
 
@@ -77,6 +78,7 @@ const routes: Routes = [
   { path: 'instructions', component: InGameInstructionsComponent},
   { path: 'congratulations', component: CongratulationsscreenComponent},
   { path: 'givenup', component: GameoverScreenComponent},
+  { path: 'info-screen', component: InfoScreenComponent},
 
   { path: 'reflection_room1', component: ReflectionRoom1Component },
   { path: 'reflection_room2', component: ReflectionRoom2Component },
@@ -197,7 +199,8 @@ const routes: Routes = [
     ConsentFormFailedComponent,
     GiveupModalComponent,
     GameoverScreenComponent,
-    HintModalComponent
+    HintModalComponent,
+    InfoScreenComponent
   ],
   imports: [
     BrowserModule,

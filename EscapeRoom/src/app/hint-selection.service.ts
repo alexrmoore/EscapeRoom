@@ -87,6 +87,8 @@ export class HintSelectionService {
       }
     } else {
       this.hintText = 'You\'ve completed the Escape Room!';
+      this.allowHint = false;
+      this.hideNewHintButton = true;
     }
   }
 
