@@ -37,6 +37,7 @@ export class PostSurveyscreenComponent implements OnInit {
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&submit_overall1=', this.submitClicks[7].toString());
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&giveup_url=', this.recentUrl.giveUpUrl);
                 this.PostSurveyUrl = this.PostSurveyUrl.concat('&hint_count=', this.hintSelection.totalHintCount.toString());
+                this.PostSurveyUrl = this.PostSurveyUrl.concat('&timer_shown=', (!this.timersService.hideTimer).toString());
   }
 
   timeToCompletion = this.timersService.finalOverallTime;

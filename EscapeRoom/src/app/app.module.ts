@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import {DragDropModule} from '@angular/cdk/drag-drop';
 
@@ -68,7 +68,6 @@ import { GiveupModalComponent } from './giveup-modal/giveup-modal.component';
 import { GameoverScreenComponent } from './gameover-screen/gameover-screen.component';
 import { HintModalComponent } from './hint-modal/hint-modal.component';
 import { InfoScreenComponent } from './info-screen/info-screen.component';
-
 
 
 
@@ -204,8 +203,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    DragDropModule
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    DragDropModule,
   ],
   exports: [RouterModule],
   providers: [LockedRoomsService, AnonymousIdentifierService, TimersService, ConsentService],
