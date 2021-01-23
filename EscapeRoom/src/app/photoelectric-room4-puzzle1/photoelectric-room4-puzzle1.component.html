@@ -3,7 +3,7 @@
     <div class="click-zone back" (click)="onBackClick()"></div>
     <div class="titletextbox" style="font-family: Arial"></div>
     <div class="inputbox">
-        <button (click)="submitClick()">Submit</button>
+        <button  class="submitbutton" (click)="submitClick()">Submit</button>
     </div>
     <div class="experiment-boundary">
         <div class="vacuumchamber" cdkDragBoundary=".experiment-boundary" cdkDrag (cdkDragEnded)="dragEnd($event,'vacuumchamber', 0)">

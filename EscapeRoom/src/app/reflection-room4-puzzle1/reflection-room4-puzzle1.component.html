@@ -6,7 +6,7 @@
     <div class="inputbox">
         <input type="range" id= "room4-puzzle1-slider" min = 0 max = 90 value = 0 step = 5>
         <label for="room4-puzzle1-slider">{{sliderRoom4Puzzle1Value}}&deg;</label><br>
-        <button (click)="submitClick()">Submit</button>
+        <button class="submitbutton" (click)="submitClick()">Submit</button>
     </div>    
     <div class="greenlight" *ngIf="puzzleWon"></div>
     <div class="redlight" *ngIf="!puzzleWon"></div> 
