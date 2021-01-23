@@ -14,15 +14,18 @@
 
 .titletextbox {
     position: absolute;
-    left: 100px;
-    top: 40px;
+    /* left: 100px; */
+    left: 30px;
+    top: 30px;
     width: 600px;
     height: 200px;
-    text-align: center;
+    /* text-align: center; */
+    text-align: left;
     font-size: 35px;
     font-weight: bolder;
 }
 
+/* old
 .continuebutton{
     position: absolute;
     left: 300px;
@@ -30,23 +33,56 @@
     top: 450px;
     width: 200px;
     font-size: 18px;
+} */
+
+
+
+.infobutton {
+    position: absolute;
+    left: 100px;
+    top: 445px;
+    width: 260px;
+    height: 80px;
+    font-size: 20px;
+    background: #3eb471;
+    text-align: center;
+    border: #525252 solid 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.continuebutton {
+    position: absolute;
+    left: 440px;
+    top: 445px;
+    width: 260px;
+    height: 80px;
+    font-size: 20px;
+    background: #3eb471;
+    text-align: center;
+    border: #525252 solid 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .textbox {
     position: absolute;
-    left: 100px;
-    top: 140px;
-    width: 600px;
+    left: 00px;
+    top: 70px;
+    width: 780px;
     height: 200px;
     text-align: left;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: normal;
 }
 
 .unilogo { /* 1411x832 */
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 640px;
+    top: 5px;
     background-image: url('../du_logo.png');
     background-size: 141px 83px;
     width: 141px;
