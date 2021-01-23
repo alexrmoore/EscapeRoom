@@ -72,6 +72,19 @@ height: 75px;
 .inputbox{
     position: absolute;
     left: 370px;
-    top: 440px;
+    top: 430px;
     z-index: 10;
   }
+
+.submitbutton {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    background: #3eb471;
+    text-align: center;
+    border: #525252 solid 4px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
