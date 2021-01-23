@@ -35,13 +35,14 @@ export class InterferenceRoom4Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public submitClick(){
-    this.puzzleTrackingService.puzzleAttempts[3] = this.puzzleTrackingService.puzzleAttempts[3] + 1;
     if (this.waveDragPositionX >= -68 && this.waveDragPositionX <= -38) {
       this.lockedRoomsService.roomLocked[3] = false;
       this.puzzleWon = true;
       this.hintSelection.hintCounter = 0;
       this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
       this.hintSelection.hideNewHintButton = false;
+    } else {
+      this.puzzleTrackingService.puzzleAttempts[3] = this.puzzleTrackingService.puzzleAttempts[3] + 1;
     }
   }
 

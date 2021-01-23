@@ -30,7 +30,6 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public submitClick(){
-    this.puzzleTrackingService.puzzleAttempts[1] = this.puzzleTrackingService.puzzleAttempts[1] + 1;
     const sliderRoom4Puzzle1 = document.getElementById('room4-puzzle1-slider') as HTMLInputElement;
     this.sliderRoom4Puzzle1Value = sliderRoom4Puzzle1.value;
     if (this.sliderRoom4Puzzle1Value === '55'){
@@ -41,6 +40,9 @@ export class ReflectionRoom4Puzzle1Component implements OnInit {
         this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
         this.hintSelection.hideNewHintButton = false;
       }
+    }
+    else {
+      this.puzzleTrackingService.puzzleAttempts[1] = this.puzzleTrackingService.puzzleAttempts[1] + 1;
     }
   }
 
