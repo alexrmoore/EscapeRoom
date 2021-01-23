@@ -40,7 +40,6 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
   public submitClick(){
     const photoelectrons = document.getElementById('electrons');
     const ammeter = document.getElementById('ammeter');
-    this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
     // Battery-y - Ammeter-y is between 125px and 145px
     // tslint:disable-next-line:max-line-length
     if ((this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) >= 125 && (this.currentCoordinates[6][1] - this.currentCoordinates[7][1]) <= 145) {
@@ -128,7 +127,6 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
       }
     }
     // FLIPPED VERTICALLY
-
     // Ammeter-y - Battery-y is between 25px and 55px
     // tslint:disable-next-line:max-line-length
     else if ((this.currentCoordinates[7][1] - this.currentCoordinates[6][1]) >= 25 && (this.currentCoordinates[7][1] - this.currentCoordinates[6][1]) <= 55) {
@@ -211,6 +209,9 @@ export class PhotoelectricRoom4Puzzle1Component implements OnInit {
           }
         }
       }
+    }
+    if (!this.puzzleWon) {
+      this.puzzleTrackingService.puzzleAttempts[5] = this.puzzleTrackingService.puzzleAttempts[5] + 1;
     }
   }
 }

@@ -33,7 +33,6 @@ export class InterferenceRoom3Puzzle1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public submitClick(){
-    this.puzzleTrackingService.puzzleAttempts[4] = this.puzzleTrackingService.puzzleAttempts[4] + 1;
     const interferencecheckboxA = document.getElementById('interferencecheckbox_a') as HTMLInputElement;
     const interferencecheckboxB = document.getElementById('interferencecheckbox_b') as HTMLInputElement;
     const interferencecheckboxC = document.getElementById('interferencecheckbox_c') as HTMLInputElement;
@@ -46,6 +45,8 @@ export class InterferenceRoom3Puzzle1Component implements OnInit {
       this.hintSelection.hintCounter = 0;
       this.hintSelection.hintText = 'Click\n"New Hint"\nto get a hint';
       this.hintSelection.hideNewHintButton = false;
+    } else {
+      this.puzzleTrackingService.puzzleAttempts[4] = this.puzzleTrackingService.puzzleAttempts[4] + 1;
     }
   }
 }
