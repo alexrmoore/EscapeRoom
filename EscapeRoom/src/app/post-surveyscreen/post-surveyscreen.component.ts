@@ -49,7 +49,7 @@ export class PostSurveyscreenComponent implements OnInit {
     const widgetNode = document.getElementById('surveywidget');
     const newWidget = document.createElement('div');
     typeformEmbed.makeWidget(newWidget, this.PostSurveyUrl, {
-      hideFooter: true,
+      hideFooter: false,
       hideHeaders: true,
     });
     newWidget.style.zIndex = '50';

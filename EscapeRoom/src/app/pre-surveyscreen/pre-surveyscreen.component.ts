@@ -21,7 +21,7 @@ export class PreSurveyscreenComponent implements OnInit {
     const widgetNode = document.getElementById('surveywidget');
     const newWidget = document.createElement('div');
     typeformEmbed.makeWidget(newWidget, this.PreSurveyUrl, {
-      hideFooter: true,
+      hideFooter: false,
       hideHeaders: true,
       onSubmit(event): void {
         newWidget.style.zIndex = '40';
