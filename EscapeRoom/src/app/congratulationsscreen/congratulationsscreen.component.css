@@ -53,8 +53,19 @@
     position: absolute;
     background: #292525;
     left: 20px;
-    top: 400px;
     width: 760px;
-    height: 130px;
+    height: 80px;
+    top: 450px;
     z-index: 21;
+}
+
+.surveytext {
+    position: absolute;
+    width: 600px;
+    left: 100px;
+    top: 390px;
+    height: 100px;
+    text-align: center;
+    z-index: 11;
+    font-size: 17px;
 }

@@ -18,15 +18,13 @@ export class TitlescreenComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // tslint:disable-next-line:typedef
-  startButton() {
+  startButton(): void {
     const hideTimerButton = document.getElementById('hideTimer') as HTMLInputElement;
-
     // this.router.navigateByUrl('/consent_form');
     this.router.navigateByUrl('/info-screen');
 
-    this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
-    // this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
+    // this.lockedRoomsService.roomLocked = [true, true, true, true, true, true, true, true];
+    this.lockedRoomsService.roomLocked = [false, false, false, false, false, false, false, false];
     // this.lockedRoomsService.roomLocked = [false, false, false, false, false, true, true, true];
     this.timersService.hideTimer = !(hideTimerButton.checked);
 
