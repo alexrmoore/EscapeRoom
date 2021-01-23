@@ -5,14 +5,14 @@
     <div class="greenlight" *ngIf="puzzleWon"></div>
     <div class="redlight" *ngIf="!puzzleWon"></div> 
     <div class="inputbox" style="font-family: Arial">
-        <input type="checkbox" id="reflectioncheckbox_a">
-        <label for="reflectioncheckbox_a"> The angle of incidence and the angle of reflection are not equal</label><br><br>
-        <input type="checkbox" id="reflectioncheckbox_b">
-        <label for="reflectioncheckbox_a"> Particles can experience reflection (under elastic conditions)</label><br><br>
-        <input type="checkbox" id="reflectioncheckbox_c">
-        <label for="reflectioncheckbox_c"> Light cannot be reflected</label><br><br>
-        <input type="checkbox" id="reflectioncheckbox_d">
-        <label for="reflectioncheckbox_d"> Waves exhibit reflection</label><br><br>
-        <button class="submitbutton" (click)="submitClick()">Submit</button>
+        <input class="customCheckbox" type="checkbox" id="reflectioncheckbox_a">
+        <label class="textlabel" for="reflectioncheckbox_a"> The angle of incidence and the angle of<br>reflection are not equal</label><br><br><br>
+        <input class="customCheckbox" type="checkbox" id="reflectioncheckbox_b">
+        <label class="textlabel" for="reflectioncheckbox_b"> Particles can experience reflection<br>(under elastic conditions)</label><br><br><br>
+        <input class="customCheckbox" type="checkbox" id="reflectioncheckbox_c">
+        <label class="textlabel" for="reflectioncheckbox_c"> Light cannot be reflected</label><br><br>
+        <input class="customCheckbox" type="checkbox" id="reflectioncheckbox_d">
+        <label class="textlabel"for="reflectioncheckbox_d"> Waves exhibit reflection</label><br>
+        <button class="submitbutton" (click)="submitClick()">SUBMIT</button>
     </div>
 </div>

@@ -15,15 +15,18 @@
 .inputbox{
     position: absolute;
     left: 55px;
-    top: 170px;
+    top: 140px;
+    font-size: x-large;
+    width: 600px;
 }
 
 .titletextbox {
     position: absolute;
     left: 55px;
-    top: 120px;
+    top: 70px;
     z-index: 4;
-    font-size: x-large;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 .click-zone {
@@ -71,5 +74,22 @@
     border-radius: 7px;
     cursor: pointer;
     font-weight: bold;
+    left: 300px;
+    top: 280px;
 }
+
+input.customCheckbox { 
+    width: 23px; 
+    height: 23px; 
+    /*vertical-align:middle;*/
+    } 
+
+.textlabel {
+    position: absolute;
+    width: 600px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
 
