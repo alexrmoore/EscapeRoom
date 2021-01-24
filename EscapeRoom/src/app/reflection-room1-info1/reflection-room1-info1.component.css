@@ -17,6 +17,7 @@
     font-weight: bold;
     left: 90px;
     top: 50px;
+    width: 400px;
     z-index: 4;
     font-size: 45px;
 }
@@ -25,6 +26,7 @@
     position: absolute;
     left: 90px;
     top: 120px;
+    width: 710px;
     z-index: 4;
     font-size: 25px;
 }

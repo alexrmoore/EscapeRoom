@@ -19,12 +19,14 @@
     top: 80px;
     z-index: 4;
     font-size: xx-large;
+    width: 600px;
 }
 
 .infotextbox {
     position: absolute;
     left: 150px;
     top: 430px;
+    width: 600px;
     z-index: 4;
     font-size: 20px;
 }

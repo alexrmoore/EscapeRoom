@@ -1,5 +1,13 @@
+.widercontainer {
+    position: absolute;
+    left: 50%;
+}
+
+
 .container {
-    position: relative;
+    position: absolute;
+    left: -400px;
+    z-index: 2;
 }
 
 
