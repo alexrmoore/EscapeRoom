@@ -26,6 +26,7 @@
     top: 40px;
     z-index: 4;
     font-size: xx-large;
+    width: 670px;
 }
 
 .click-zone {
@@ -62,13 +63,13 @@
 }
 
 .experiment-boundary {
-  position: absolute;
+  position: relative;
   top: 40px;
   left: 22px;
   width: 755px;
   height: 430px;
   max-width: 100%;
-  border: none;
+  border: none
 }
 
 

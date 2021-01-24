@@ -1,5 +1,11 @@
+.widercontainer {
+    position: absolute;
+    left: 50%;
+}
+
 .container {
     position: absolute;
+    left: -400px;
 }
 
 .blurredbackground {

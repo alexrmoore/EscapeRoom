@@ -19,6 +19,7 @@
     top: 50px;
     z-index: 4;
     font-size: xx-large;
+    width: 600px;
 }
 
 .infotextbox {
@@ -27,6 +28,7 @@
     top: 110px;
     z-index: 4;
     font-size: large;
+    width: 450px;
 }
 
 .click-zone {

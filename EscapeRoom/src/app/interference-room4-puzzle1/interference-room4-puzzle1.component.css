@@ -1,5 +1,5 @@
 .container {
-    position: relative;
+    position: absolute;
 }
 
 .video {
@@ -56,7 +56,7 @@
 }
 
 .waveform-boundary {
-    position: absolute;
+    position: relative;
     top: 140px;
     left: 24px;
     width: 750px;
