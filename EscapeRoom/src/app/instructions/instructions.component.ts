@@ -12,23 +12,25 @@ export class InstructionsComponent implements OnInit {
   showStart = false;
   startSurveyURL = 'https://docs.google.com/forms/d/e/1FAIpQLScQiXQCsGKx1eoWEpBK8qvIgA3NkivqVyX4whowTCR7MUFBiQ/viewform?usp=pp_url&entry.906372509=';
 
-  // tslint:disable-next-line:max-line-length
-  constructor(private router: Router, private anonymousIdentifierService: AnonymousIdentifierService, private timersService: TimersService) { }
+  constructor(private router: Router,
+              private anonymousIdentifierService: AnonymousIdentifierService,
+              private timersService: TimersService) { }
 
   anonymousCode = this.anonymousIdentifierService.anonymousCode;
 
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
-  surveyClick(){
+/*
+  surveyClick(): void{
     this.startSurveyURL = this.startSurveyURL.concat(this.anonymousCode);
     window.open(this.startSurveyURL, '_blank');
     setTimeout(() => { this.showStart = true; }, 1000); // Increase the seconds at a later date
-  }
+  } */
 
-  // tslint:disable-next-line:typedef
-  startClick(){
+  startClick(): void{
+    const hideTimerButton = document.getElementById('hideTimer') as HTMLInputElement;
+    this.timersService.hideTimer = !(hideTimerButton.checked);
     this.timersService.startOverallTimer();
     this.router.navigateByUrl('/reflection_room1');
   }
