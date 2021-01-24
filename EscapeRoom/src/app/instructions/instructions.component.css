@@ -137,3 +137,21 @@ li {
     width: 96px;
     height: 100px;
 }
+
+
+.hidetimer {
+    position: absolute;
+    top: 470px;
+    left: 610px;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    z-index: 11;
+    text-align: center;
+    align-items: center;
+}
+
+input.largerCheckbox { 
+    width: 20px; 
+    height: 20px; 
+    }
