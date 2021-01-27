@@ -22,7 +22,7 @@ export class InfoScreenComponent {
 
   infoClick(): void {
     const pdfUrl = '../assets/InfoSheet.pdf';
-    const pdfName = 'PhysicsEscapeRoom_InformationSheet_17.01.21.pdf';
+    const pdfName = 'PhysicsEscapeRoom_InformationSheet_25.01.21.pdf';
     FileSaver.saveAs(pdfUrl, pdfName);
   }
 
