@@ -16,9 +16,9 @@
     position: absolute;
     width: 700px;
     left: 60px;
-    top: 70px;
+    top: 65px;
     z-index: 3;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .click-zone {
@@ -41,7 +41,7 @@
     background-image: url(../photoelectric_frequency.png);
     width: 500px;
     height: 113px;
-    top: 350px;
+    top: 360px;
     left: 150px;
 }
 
