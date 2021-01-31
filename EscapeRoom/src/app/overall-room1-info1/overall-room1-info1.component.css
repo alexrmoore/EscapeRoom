@@ -62,3 +62,13 @@
     left: 495px;
     top: 315px;
 } 
+
+  
+figcaption {
+    position: relative;
+    color: black;
+    text-align: right;
+    font-style: italic;
+    top: 155px;
+    font-size: 10px;
+  }

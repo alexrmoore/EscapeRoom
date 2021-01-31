@@ -56,3 +56,14 @@
     top: 70px;
 }
 
+  
+figcaption {
+    position: relative;
+    color: black;
+    text-align: right;
+    font-style: italic;
+    top: 152px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
