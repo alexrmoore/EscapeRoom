@@ -18,16 +18,16 @@
     left: 80px;
     top: 50px;
     z-index: 4;
-    font-size: xx-large;
+    font-size: 40px;
     width: 600px;
 }
 
 .infotextbox {
     position: absolute;
-    left: 330px;
-    top: 110px;
+    left: 305px;
+    top: 93px;
     z-index: 4;
-    font-size: large;
+    font-size: 25px;
     width: 450px;
 }
 
