@@ -67,3 +67,13 @@
     width: 140px;
     height: 59px;
 }
+
+  
+figcaption {
+    position: relative;
+    color: black;
+    text-align: right;
+    font-style: italic;
+    top: 155px;
+    font-size: 10px;
+  }
